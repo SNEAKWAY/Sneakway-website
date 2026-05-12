@@ -336,5 +336,26 @@
       45
     ],
     "isBestSeller": true
+  },
+  {
+    "id": "1778611903503",
+    "name": "Timberland black",
+    "description": "",
+    "price": 5000,
+    "offerPrice": 3600,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778611900221-timberland-black-1778611897671-1001094160.jpg"
+    ],
+    "brand": "Timberland",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": true
   }
 ]

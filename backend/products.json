@@ -223,5 +223,25 @@
       45
     ],
     "isBestSeller": true
+  },
+  {
+    "id": "1778603118661",
+    "name": "Adidas samba jane",
+    "description": "",
+    "price": 3000,
+    "offerPrice": 2500,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778603114857-adidas-samba-jane-1778603112593-e8904a7f-5607-48ab-9df5-84d19c765164.jpeg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "isBestSeller": false
   }
 ]

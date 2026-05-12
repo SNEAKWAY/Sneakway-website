@@ -791,6 +791,101 @@ button.card {
   margin-top: 8px;
 }
 
+.detail-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.detail-cta-row .detail-cta {
+  margin-top: 0;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.modal {
+  width: min(520px, 100%);
+  max-height: min(90vh, 720px);
+  overflow-y: auto;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: 0 24px 64px rgba(15, 23, 42, 0.22);
+  padding: 22px 24px 24px;
+}
+
+.modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.modal__title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--ink);
+}
+
+.modal__close {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin: -8px -8px 0 0;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.modal__close:hover {
+  background: rgba(15, 23, 42, 0.06);
+  color: var(--ink);
+}
+
+.buy-form {
+  display: grid;
+  gap: 14px;
+}
+
+.buy-form .form__row {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 639px) {
+  .buy-form .form__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.modal__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 4px;
+}
+
 .price-row {
   display: flex;
   gap: 14px;

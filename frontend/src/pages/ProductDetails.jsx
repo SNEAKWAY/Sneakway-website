@@ -14,11 +14,47 @@ const formatPrice = (value) =>
 
 const SIZE_OPTIONS = Array.from({ length: 10 }, (_, idx) => 36 + idx);
 
+const emptyBuyForm = () => ({
+  name: "",
+  address: "",
+  city: "",
+  district: "",
+  state: "",
+  pincode: "",
+  mob1: "",
+  mob2: "",
+  size: "",
+});
+
+const buildBuyNowWhatsappText = (productUrl, productName, fields) => {
+  const lines = [
+    "I want to buy this product:",
+    "",
+    `Product: ${productName}`,
+    `Link: ${productUrl}`,
+    "",
+    "Delivery details:",
+    `Name: ${fields.name}`,
+    `Address: ${fields.address}`,
+    `City: ${fields.city}`,
+    `District: ${fields.district}`,
+    `State: ${fields.state}`,
+    `Pincode: ${fields.pincode}`,
+    `Mobile 1: ${fields.mob1}`,
+    `Mobile 2: ${fields.mob2 || "—"}`,
+    `Size: ${fields.size}`,
+  ];
+  return lines.join("\n");
+};
+
 const ProductDetails = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [saleConfig, setSaleConfig] = useState(null);
+  const [buyModalOpen, setBuyModalOpen] = useState(false);
+  const [buyForm, setBuyForm] = useState(() => emptyBuyForm());
+
   useEffect(() => {
     const loadProduct = async () => {
       try {
@@ -49,6 +85,15 @@ const ProductDetails = () => {
     loadSale();
   }, []);
 
+  useEffect(() => {
+    if (!buyModalOpen) return;
+    const onKey = (event) => {
+      if (event.key === "Escape") setBuyModalOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [buyModalOpen]);
+
   if (isLoading) {
     return <div className="loading">Loading product...</div>;
   }
@@ -64,9 +109,37 @@ const ProductDetails = () => {
     );
   }
 
-  const whatsappLink = `${WHATSAPP_BASE}?text=${encodeURIComponent(
+  const enquiryWhatsappLink = `${WHATSAPP_BASE}?text=${encodeURIComponent(
     `Hi! I'm interested in this product: ${window.location.href}`,
   )}`;
+
+  const sizeChoices =
+    product.sizes?.length > 0
+      ? [...product.sizes].sort((a, b) => a - b)
+      : [...SIZE_OPTIONS];
+
+  const openBuyModal = () => {
+    setBuyForm(emptyBuyForm());
+    setBuyModalOpen(true);
+  };
+
+  const closeBuyModal = () => setBuyModalOpen(false);
+
+  const handleBuyFormChange = (field, value) => {
+    setBuyForm((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const submitBuyToWhatsapp = (event) => {
+    event.preventDefault();
+    const text = buildBuyNowWhatsappText(
+      window.location.href,
+      product.name,
+      buyForm,
+    );
+    const url = `${WHATSAPP_BASE}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+    closeBuyModal();
+  };
 
   const currentSale = saleConfig?.current || saleConfig || null;
   const isSaleActive =
@@ -87,6 +160,7 @@ const ProductDetails = () => {
   const showSaleStrike = isSaleActive && discount > 0 && originalBase > 0;
 
   return (
+    <>
     <section className="layout-split product-detail">
       <div className="product-detail__gallery">
         <ImageCarousel images={product.images} />
@@ -155,16 +229,200 @@ const ProductDetails = () => {
           </div>
         </div>
 
-        <a
-          href={whatsappLink}
-          target="_blank"
-          rel="noreferrer"
-          className="button button--primary whatsapp detail-cta"
-        >
-          Chat on WhatsApp
-        </a>
+        <div className="detail-cta-row">
+          <button
+            type="button"
+            className="button button--primary whatsapp detail-cta"
+            onClick={openBuyModal}
+          >
+            Buy Now
+          </button>
+          <a
+            href={enquiryWhatsappLink}
+            target="_blank"
+            rel="noreferrer"
+            className="button button--outline detail-cta"
+          >
+            Send Enquiry
+          </a>
+        </div>
       </div>
     </section>
+
+      {buyModalOpen ? (
+        <div
+          className="modal-backdrop"
+          role="presentation"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) closeBuyModal();
+          }}
+        >
+          <div
+            className="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="buy-modal-title"
+          >
+            <div className="modal__header">
+              <h2 id="buy-modal-title" className="modal__title">
+                Delivery details
+              </h2>
+              <button
+                type="button"
+                className="modal__close"
+                onClick={closeBuyModal}
+                aria-label="Close"
+              >
+                ×
+              </button>
+            </div>
+            <form className="buy-form" onSubmit={submitBuyToWhatsapp}>
+              <label className="form__label">
+                Name
+                <input
+                  className="form__input form__input--full"
+                  value={buyForm.name}
+                  onChange={(e) => handleBuyFormChange("name", e.target.value)}
+                  required
+                  autoComplete="name"
+                />
+              </label>
+              <label className="form__label">
+                Address
+                <textarea
+                  className="form__textarea form__input--full"
+                  rows={3}
+                  value={buyForm.address}
+                  onChange={(e) =>
+                    handleBuyFormChange("address", e.target.value)
+                  }
+                  required
+                  autoComplete="street-address"
+                />
+              </label>
+              <div className="form__row">
+                <label className="form__label">
+                  City
+                  <input
+                    className="form__input form__input--full"
+                    value={buyForm.city}
+                    onChange={(e) =>
+                      handleBuyFormChange("city", e.target.value)
+                    }
+                    required
+                    autoComplete="address-level2"
+                  />
+                </label>
+                <label className="form__label">
+                  District
+                  <input
+                    className="form__input form__input--full"
+                    value={buyForm.district}
+                    onChange={(e) =>
+                      handleBuyFormChange("district", e.target.value)
+                    }
+                    required
+                  />
+                </label>
+              </div>
+              <div className="form__row">
+                <label className="form__label">
+                  State
+                  <input
+                    className="form__input form__input--full"
+                    value={buyForm.state}
+                    onChange={(e) =>
+                      handleBuyFormChange("state", e.target.value)
+                    }
+                    required
+                    autoComplete="address-level1"
+                  />
+                </label>
+                <label className="form__label">
+                  Pincode
+                  <input
+                    className="form__input form__input--full"
+                    inputMode="numeric"
+                    pattern="[0-9]{6}"
+                    maxLength={6}
+                    value={buyForm.pincode}
+                    onChange={(e) =>
+                      handleBuyFormChange("pincode", e.target.value)
+                    }
+                    required
+                    autoComplete="postal-code"
+                  />
+                </label>
+              </div>
+              <div className="form__row">
+                <label className="form__label">
+                  Mobile 1
+                  <input
+                    className="form__input form__input--full"
+                    type="tel"
+                    value={buyForm.mob1}
+                    onChange={(e) =>
+                      handleBuyFormChange("mob1", e.target.value)
+                    }
+                    required
+                    autoComplete="tel"
+                  />
+                </label>
+                <label className="form__label">
+                  Mobile 2 (optional)
+                  <input
+                    className="form__input form__input--full"
+                    type="tel"
+                    value={buyForm.mob2}
+                    onChange={(e) =>
+                      handleBuyFormChange("mob2", e.target.value)
+                    }
+                    autoComplete="tel"
+                  />
+                </label>
+              </div>
+              <label className="form__label">
+                Size
+                <select
+                  className="form__input form__select form__input--full"
+                  value={buyForm.size}
+                  onChange={(e) =>
+                    handleBuyFormChange("size", e.target.value)
+                  }
+                  required
+                >
+                  <option value="" disabled>
+                    Select size
+                  </option>
+                  {sizeChoices.map((size) => {
+                    const inStock =
+                      !product.sizes?.length || product.sizes.includes(size);
+                    return (
+                      <option key={size} value={String(size)} disabled={!inStock}>
+                        {size}
+                        {!inStock ? " (out of stock)" : ""}
+                      </option>
+                    );
+                  })}
+                </select>
+              </label>
+              <div className="modal__actions">
+                <button
+                  type="button"
+                  className="button button--outline"
+                  onClick={closeBuyModal}
+                >
+                  Cancel
+                </button>
+                <button type="submit" className="button button--primary">
+                  OK
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      ) : null}
+    </>
   );
 };
 

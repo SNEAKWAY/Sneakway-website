@@ -38,25 +38,6 @@
     ]
   },
   {
-    "id": "1770375327761",
-    "name": "NIKE SB DUNK STONE ISLAND SUPREME",
-    "description": "",
-    "price": 3199,
-    "offerPrice": 2699,
-    "images": [
-      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1770375257364-nike-sb-dunk-stone-island-supreme-1770375255859-img_5908.jpeg"
-    ],
-    "brand": "Nike",
-    "sizes": [
-      40,
-      41,
-      42,
-      43,
-      44,
-      45
-    ]
-  },
-  {
     "id": "1778600554070",
     "name": "Puma speed cat girls leapord",
     "description": "",

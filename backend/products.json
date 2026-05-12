@@ -315,5 +315,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778611869318",
+    "name": "Timberland tan",
+    "description": "",
+    "price": 5000,
+    "offerPrice": 3600,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778611865768-timberland-tan-1778611862984-1001094159.jpg"
+    ],
+    "brand": "Timberland",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": true
   }
 ]

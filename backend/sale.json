@@ -3,8 +3,8 @@
     "name": "Ramadan Feast",
     "description": "Grab your favourite sneakers this Ramadan",
     "price": 600,
-    "startDate": "2026-03-01",
-    "endDate": "2026-03-02",
+    "startDate": "2026-05-12",
+    "endDate": "2026-05-20",
     "enabled": true
   },
   "history": [
@@ -25,6 +25,15 @@
       "startDate": "2026-03-01",
       "endDate": "2026-03-02",
       "enabledAt": "2026-03-01T08:11:11.185Z"
+    },
+    {
+      "id": "1778609820356",
+      "name": "Ramadan Feast",
+      "description": "Grab your favourite sneakers this Ramadan",
+      "price": 600,
+      "startDate": "2026-05-12",
+      "endDate": "2026-05-20",
+      "enabledAt": "2026-05-12T18:17:00.356Z"
     }
   ]
 }

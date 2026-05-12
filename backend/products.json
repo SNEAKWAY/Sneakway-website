@@ -183,22 +183,21 @@
   },
   {
     "id": "1778600554070",
-    "name": "Shan sneaker",
+    "name": "Puma speed cat girls leapord",
     "description": "",
-    "price": 150,
-    "offerPrice": 10,
+    "price": 3500,
+    "offerPrice": 2699,
     "images": [
       "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778600550370-shan-sneaker-1778600548960-6aecb984-d8ac-4710-90d0-914374127a61.jpeg"
     ],
-    "brand": "Nike",
+    "brand": "Puma",
     "category": "Shoes",
     "sizes": [
-      40,
-      41,
-      42,
-      43,
-      44,
-      45
+      36,
+      37,
+      38,
+      39,
+      40
     ],
     "isBestSeller": true
   },

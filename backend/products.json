@@ -1,27 +1,5 @@
 [
   {
-    "id": "1772717223915",
-    "name": "ADIDAS ADIOS BERLIN SILVER GREEN",
-    "description": "",
-    "price": 2999,
-    "offerPrice": 2499,
-    "images": [
-      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1772717219757-adidas-adios-berlin-silver-green-1772717217239-img_9168.jpeg",
-      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1772717221675-adidas-adios-berlin-silver-green-1772717220722-img_9169.jpeg"
-    ],
-    "brand": "Adidas",
-    "category": "Shoes",
-    "sizes": [
-      40,
-      41,
-      42,
-      43,
-      44,
-      45
-    ],
-    "isBestSeller": false
-  },
-  {
     "id": "1770375798881",
     "name": "NIKE AIR JORDANS RETRO 1 MID PURPLE",
     "description": "",

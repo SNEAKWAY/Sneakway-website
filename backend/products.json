@@ -81,26 +81,6 @@
     "isBestSeller": false
   },
   {
-    "id": "1772380832727",
-    "name": "ADIDAS ALEXANDER WANG LEATHER MULES GREY",
-    "description": "",
-    "price": 1999,
-    "offerPrice": 1499,
-    "images": [
-      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1772380830465-adidas-alexander-wang-leather-mules-grey-1772380829357-75c5435b-c54b-4649-812a-316a6a821b65.jpeg"
-    ],
-    "brand": "Adidas",
-    "category": "Shoes",
-    "sizes": [
-      40,
-      41,
-      42,
-      43,
-      44
-    ],
-    "isBestSeller": false
-  },
-  {
     "id": "1770373114403",
     "name": "NEW BALANCE 1000 PHANTOM",
     "description": "",

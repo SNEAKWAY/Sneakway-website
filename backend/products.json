@@ -106,5 +106,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778610869628",
+    "name": "ADIDAS SUPERSTAR MESSI WHITE SKY",
+    "description": "",
+    "price": 4500,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778610865958-adidas-superstar-messi-white-sky-1778610863229-1001094149.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

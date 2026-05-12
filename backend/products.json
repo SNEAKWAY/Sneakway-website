@@ -273,5 +273,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778611539961",
+    "name": "Nb 1906 A Dragon berry",
+    "description": "",
+    "price": 4500,
+    "offerPrice": 3499,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778611537057-nb-1906-a-dragon-berry-1778611533924-1001094157.jpg"
+    ],
+    "brand": "New Balance",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

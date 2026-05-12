@@ -294,5 +294,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778611590368",
+    "name": "Converse legacy red",
+    "description": "",
+    "price": 4200,
+    "offerPrice": 3199,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778611587715-converse-legacy-red-1778611585306-1001094158.jpg"
+    ],
+    "brand": "Converse",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

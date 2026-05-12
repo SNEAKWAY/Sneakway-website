@@ -19,27 +19,6 @@
     ]
   },
   {
-    "id": "1770409244554",
-    "name": "NEW BALANCE 9060 BLACK",
-    "description": "",
-    "price": 3399,
-    "offerPrice": 2899,
-    "images": [
-      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1770409239837-new-balance-9060-black-1770409238282-img_6216.jpeg",
-      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1770409241493-new-balance-9060-black-1770409240588-img_6217.jpeg"
-    ],
-    "brand": "New Balance",
-    "sizes": [
-      40,
-      41,
-      42,
-      43,
-      44,
-      45
-    ],
-    "isBestSeller": true
-  },
-  {
     "id": "1770373114403",
     "name": "NEW BALANCE 1000 PHANTOM",
     "description": "",

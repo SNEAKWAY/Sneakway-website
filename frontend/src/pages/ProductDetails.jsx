@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import ImageCarousel from "../components/ImageCarousel.jsx";
 
 const API_URL = import.meta.env.VITE_API_URL;
-const WHATSAPP_BASE = "https://wa.me/917907607583";
+const WHATSAPP_BASE = "https://wa.me/916282365256";
 
 const formatPrice = (value) =>
   new Intl.NumberFormat("en-IN", {
@@ -72,9 +72,9 @@ const ProductDetails = () => {
   const isSaleActive =
     Boolean(
       currentSale?.enabled &&
-        currentSale?.price &&
-        currentSale?.startDate &&
-        currentSale?.endDate,
+      currentSale?.price &&
+      currentSale?.startDate &&
+      currentSale?.endDate,
     ) &&
     new Date() >= new Date(`${currentSale.startDate}T00:00:00`) &&
     new Date() <= new Date(`${currentSale.endDate}T23:59:59`);

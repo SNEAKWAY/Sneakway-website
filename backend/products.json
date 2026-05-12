@@ -127,5 +127,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778610956311",
+    "name": "NB 9060 SAND AND MOCHA",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778610950589-nb-9060-sand-and-mocha-1778610947234-1001094150.jpg"
+    ],
+    "brand": "New Balance",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

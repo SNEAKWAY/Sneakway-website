@@ -169,5 +169,25 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778611141189",
+    "name": "PUMA SPEED CAT",
+    "description": "",
+    "price": 3900,
+    "offerPrice": 2699,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778611138467-puma-speed-cat-1778611136196-1001094152.jpg"
+    ],
+    "brand": "Puma",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "isBestSeller": false
   }
 ]

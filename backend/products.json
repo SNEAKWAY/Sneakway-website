@@ -1,24 +1,5 @@
 [
   {
-    "id": "1770373114403",
-    "name": "NEW BALANCE 1000 PHANTOM",
-    "description": "",
-    "price": 3499,
-    "offerPrice": 2999,
-    "images": [
-      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1770373109946-new-balance-1000-phantom-1770373106328-img_5868.jpeg"
-    ],
-    "brand": "New Balance",
-    "sizes": [
-      40,
-      41,
-      42,
-      43,
-      44,
-      45
-    ]
-  },
-  {
     "id": "1778600554070",
     "name": "Puma speed cat girls leapord",
     "description": "",

@@ -19,27 +19,6 @@
     ]
   },
   {
-    "id": "1771577988257",
-    "name": "NIKE SB DUNK SUPREME 2025 BURGUNDY",
-    "description": "",
-    "price": 3299,
-    "offerPrice": 2799,
-    "images": [
-      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1771577983579-nike-sb-dunk-supreme-2025-burgundy-1771577981548-img_7994.jpeg",
-      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1771577985956-nike-sb-dunk-supreme-2025-burgundy-1771577984242-img_7995.jpeg"
-    ],
-    "brand": "Nike",
-    "sizes": [
-      40,
-      41,
-      42,
-      43,
-      44,
-      45
-    ],
-    "isBestSeller": false
-  },
-  {
     "id": "1770409244554",
     "name": "NEW BALANCE 9060 BLACK",
     "description": "",

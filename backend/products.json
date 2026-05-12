@@ -1,0 +1,206 @@
+[
+  {
+    "id": "1772717223915",
+    "name": "ADIDAS ADIOS BERLIN SILVER GREEN",
+    "description": "",
+    "price": 2999,
+    "offerPrice": 2499,
+    "images": [
+      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1772717219757-adidas-adios-berlin-silver-green-1772717217239-img_9168.jpeg",
+      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1772717221675-adidas-adios-berlin-silver-green-1772717220722-img_9169.jpeg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
+  },
+  {
+    "id": "1770375798881",
+    "name": "NIKE AIR JORDANS RETRO 1 MID PURPLE",
+    "description": "",
+    "price": 3099,
+    "offerPrice": 2599,
+    "images": [
+      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1770375796166-nike-air-jordans-retro-1-mid-purple-1770375794011-img_5915.jpeg"
+    ],
+    "brand": "Nike",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ]
+  },
+  {
+    "id": "1771577988257",
+    "name": "NIKE SB DUNK SUPREME 2025 BURGUNDY",
+    "description": "",
+    "price": 3299,
+    "offerPrice": 2799,
+    "images": [
+      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1771577983579-nike-sb-dunk-supreme-2025-burgundy-1771577981548-img_7994.jpeg",
+      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1771577985956-nike-sb-dunk-supreme-2025-burgundy-1771577984242-img_7995.jpeg"
+    ],
+    "brand": "Nike",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
+  },
+  {
+    "id": "1770409244554",
+    "name": "NEW BALANCE 9060 BLACK",
+    "description": "",
+    "price": 3399,
+    "offerPrice": 2899,
+    "images": [
+      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1770409239837-new-balance-9060-black-1770409238282-img_6216.jpeg",
+      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1770409241493-new-balance-9060-black-1770409240588-img_6217.jpeg"
+    ],
+    "brand": "New Balance",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": true
+  },
+  {
+    "id": "1770408105760",
+    "name": "NIKE V2K RUN METALLIC",
+    "description": "",
+    "price": 3199,
+    "offerPrice": 2699,
+    "images": [
+      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1770408102867-nike-v2k-run-metallic-1770408101140-img_6198.jpeg"
+    ],
+    "brand": "Nike",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
+  },
+  {
+    "id": "1772381901021",
+    "name": "NIKE SB DUNK SUPREME 94 CAMPER GREEN 2025",
+    "description": "",
+    "price": 3199,
+    "offerPrice": 2699,
+    "images": [
+      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1772381897165-nike-sb-dunk-supreme-94-camper-green-2025-1772381895726-f57dfb87-b31d-4b15-b0a5-23a5d3c2e06e.jpeg",
+      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1772381898128-nike-sb-dunk-supreme-94-camper-green-2025-1772381897752-79c67239-6eb7-4ca0-b5a8-76a468a4c8ec.jpeg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
+  },
+  {
+    "id": "1772380832727",
+    "name": "ADIDAS ALEXANDER WANG LEATHER MULES GREY",
+    "description": "",
+    "price": 1999,
+    "offerPrice": 1499,
+    "images": [
+      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1772380830465-adidas-alexander-wang-leather-mules-grey-1772380829357-75c5435b-c54b-4649-812a-316a6a821b65.jpeg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "isBestSeller": false
+  },
+  {
+    "id": "1770373114403",
+    "name": "NEW BALANCE 1000 PHANTOM",
+    "description": "",
+    "price": 3499,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1770373109946-new-balance-1000-phantom-1770373106328-img_5868.jpeg"
+    ],
+    "brand": "New Balance",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ]
+  },
+  {
+    "id": "1770375327761",
+    "name": "NIKE SB DUNK STONE ISLAND SUPREME",
+    "description": "",
+    "price": 3199,
+    "offerPrice": 2699,
+    "images": [
+      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1770375257364-nike-sb-dunk-stone-island-supreme-1770375255859-img_5908.jpeg"
+    ],
+    "brand": "Nike",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ]
+  },
+  {
+    "id": "1771251703807",
+    "name": "ON RUNNING CLOUDBOOM STRIKE LS BLACK",
+    "description": "",
+    "price": 3499,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1771251699744-on-running-cloudboom-strike-ls-black-1771251698136-img_7629.jpeg",
+      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1771251701572-on-running-cloudboom-strike-ls-black-1771251700356-img_7630.jpeg"
+    ],
+    "brand": "ON",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
+  }
+]

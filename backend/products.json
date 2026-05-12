@@ -231,5 +231,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778611406911",
+    "name": "Nb 9060 blue haze",
+    "description": "",
+    "price": 3999,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778611404366-nb-9060-blue-haze-1778611401540-1001094156.jpg"
+    ],
+    "brand": "New Balance",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

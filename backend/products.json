@@ -1,24 +1,5 @@
 [
   {
-    "id": "1770375798881",
-    "name": "NIKE AIR JORDANS RETRO 1 MID PURPLE",
-    "description": "",
-    "price": 3099,
-    "offerPrice": 2599,
-    "images": [
-      "https://raw.githubusercontent.com/naslajaleel/Noft-Website/main/frontend/public/uploads/1770375796166-nike-air-jordans-retro-1-mid-purple-1770375794011-img_5915.jpeg"
-    ],
-    "brand": "Nike",
-    "sizes": [
-      40,
-      41,
-      42,
-      43,
-      44,
-      45
-    ]
-  },
-  {
     "id": "1770373114403",
     "name": "NEW BALANCE 1000 PHANTOM",
     "description": "",

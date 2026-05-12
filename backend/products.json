@@ -202,5 +202,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778600554070",
+    "name": "Shan sneaker",
+    "description": "",
+    "price": 150,
+    "offerPrice": 10,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778600550370-shan-sneaker-1778600548960-6aecb984-d8ac-4710-90d0-914374127a61.jpeg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": true
   }
 ]

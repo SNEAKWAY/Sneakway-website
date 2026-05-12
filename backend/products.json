@@ -148,5 +148,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778611070725",
+    "name": "NB 509 custom",
+    "description": "",
+    "price": 4500,
+    "offerPrice": 3199,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778611067848-nb-509-custom-1778611063948-1001094151.jpg"
+    ],
+    "brand": "New Balance",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

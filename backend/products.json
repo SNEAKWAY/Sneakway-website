@@ -252,5 +252,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778611463453",
+    "name": "Reebok full white",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2699,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778611449712-reebok-full-white-1778611446590-1001094155.jpg"
+    ],
+    "brand": "Reebok",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

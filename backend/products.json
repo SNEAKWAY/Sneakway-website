@@ -941,5 +941,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778644818431",
+    "name": "Nike dunk low black",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2699,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778644797669-product-1778644793031-1001094694.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

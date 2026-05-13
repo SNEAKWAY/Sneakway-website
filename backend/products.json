@@ -1738,5 +1738,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778653850311",
+    "name": "Nb 1906 A IMP",
+    "description": "",
+    "price": 3000,
+    "offerPrice": 2300,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778653816296-product-1778653814055-1001095297.jpg"
+    ],
+    "brand": "New Balance",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

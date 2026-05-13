@@ -2067,5 +2067,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778668565457",
+    "name": "Adidas samba walesbonner",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 2799,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778668515513-product-1778668512422-1001096970.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

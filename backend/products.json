@@ -920,5 +920,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778644787142",
+    "name": "Adidas superstar black danger",
+    "description": "",
+    "price": 3999,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778644761087-product-1778644759341-1001094695.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

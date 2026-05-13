@@ -773,5 +773,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778644534998",
+    "name": "Nike airforce low blue black",
+    "description": "",
+    "price": 3900,
+    "offerPrice": 2899,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778644503004-product-1778644500519-1001094702.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

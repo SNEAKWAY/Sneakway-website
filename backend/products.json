@@ -710,5 +710,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778644425711",
+    "name": "Nb 9060 bodega",
+    "description": "",
+    "price": 3900,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778644400738-product-1778644397928-1001094705.jpg"
+    ],
+    "brand": "New Balance",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

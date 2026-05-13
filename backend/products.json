@@ -899,5 +899,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778644751436",
+    "name": "Asics kayano black grey",
+    "description": "",
+    "price": 4500,
+    "offerPrice": 3299,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778644716021-product-1778644713334-1001094696.jpg"
+    ],
+    "brand": "Asics",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

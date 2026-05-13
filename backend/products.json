@@ -962,5 +962,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778644861494",
+    "name": "Nike dunk low stranger things",
+    "description": "",
+    "price": 3800,
+    "offerPrice": 2899,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778644826950-product-1778644824277-1001094693.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

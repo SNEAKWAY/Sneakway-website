@@ -1067,5 +1067,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778649564360",
+    "name": "Nike imp shoe",
+    "description": "",
+    "price": 2999,
+    "offerPrice": 2100,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778649535239-product-1778649532136-1001095461.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

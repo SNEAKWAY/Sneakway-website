@@ -1466,5 +1466,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778653295827",
+    "name": "Crocs bayaband",
+    "description": "",
+    "price": 1900,
+    "offerPrice": 1099,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778653293503-crocs-bayaband-1778653291379-1001095413.jpg"
+    ],
+    "brand": "Crocs",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

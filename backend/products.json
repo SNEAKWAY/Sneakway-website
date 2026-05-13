@@ -1004,5 +1004,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778645541703",
+    "name": "Nike Air jordan low black grey",
+    "description": "",
+    "price": 3999,
+    "offerPrice": 2899,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778645501444-product-1778645498831-1001094691.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

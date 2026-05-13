@@ -420,5 +420,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778643216701",
+    "name": "Nike jordan jumpman green",
+    "description": "",
+    "price": 3000,
+    "offerPrice": 2100,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778643210119-nike-jordan-jumpman-green-1778643207373-1001094663.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

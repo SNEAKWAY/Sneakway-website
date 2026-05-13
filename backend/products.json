@@ -1172,5 +1172,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778651695104",
+    "name": "Nike dunk 7@",
+    "description": "",
+    "price": 2100,
+    "offerPrice": 1599,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778651692806-nike-dunk-7-1778651690629-1001095429.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

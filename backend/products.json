@@ -878,5 +878,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778644706998",
+    "name": "Nike Airforce brown swoosh",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2500,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778644680643-product-1778644678652-1001094697.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

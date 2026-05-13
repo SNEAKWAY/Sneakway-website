@@ -794,5 +794,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778644573615",
+    "name": "Nike dunk low supreme white red",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2899,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778644545481-product-1778644542423-1001094701.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

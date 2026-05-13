@@ -689,5 +689,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778644382626",
+    "name": "Converse chuck 70 red",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2699,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778644329452-product-1778644326645-1001094706.jpg"
+    ],
+    "brand": "Converse",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

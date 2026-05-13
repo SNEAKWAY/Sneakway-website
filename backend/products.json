@@ -462,5 +462,25 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778643319735",
+    "name": "Adidas campus brown for girls",
+    "description": "",
+    "price": 3000,
+    "offerPrice": 2300,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778643316725-adidas-campus-brown-for-girls-1778643314298-1001094659.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "isBestSeller": false
   }
 ]

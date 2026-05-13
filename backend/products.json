@@ -605,5 +605,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778644169889",
+    "name": "Adidas superstar walesbonner",
+    "description": "",
+    "price": 3900,
+    "offerPrice": 3100,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778644145875-product-1778644143126-1001094709.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

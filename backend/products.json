@@ -1046,5 +1046,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778645639331",
+    "name": "Nike dunk low stussy white green",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2699,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778645612591-product-1778645609817-1001094689.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

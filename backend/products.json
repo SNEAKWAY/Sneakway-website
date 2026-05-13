@@ -752,5 +752,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778644496777",
+    "name": "Adidas superstar stussy black blue",
+    "description": "",
+    "price": 3900,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778644469479-product-1778644467313-1001094703.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

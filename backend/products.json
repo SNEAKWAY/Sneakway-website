@@ -502,5 +502,25 @@
       40
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778643409015",
+    "name": "Adidas campus black for gilrs",
+    "description": "",
+    "price": 3000,
+    "offerPrice": 2300,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778643406089-adidas-campus-black-for-gilrs-1778643403864-1001094657.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "isBestSeller": false
   }
 ]

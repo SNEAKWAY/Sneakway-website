@@ -2088,5 +2088,20 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778668730528",
+    "name": "Imported shoes",
+    "description": "",
+    "price": 2900,
+    "offerPrice": 1999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778668696348-product-1778668691686-1001095211.jpg",
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778668699257-product-1778668697010-1001095210.jpg"
+    ],
+    "brand": "7A shoes",
+    "category": "Shoes",
+    "sizes": [],
+    "isBestSeller": false
   }
 ]

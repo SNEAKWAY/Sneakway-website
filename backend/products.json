@@ -399,5 +399,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778643167563",
+    "name": "Nike dunk stussy white green",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2799,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778643164998-nike-dunk-stussy-white-green-1778643162226-1001094664.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

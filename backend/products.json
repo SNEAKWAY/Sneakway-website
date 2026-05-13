@@ -564,5 +564,25 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778643596300",
+    "name": "Birkenstock slides for girls",
+    "description": "",
+    "price": 2500,
+    "offerPrice": 1499,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778643593076-birkenstock-slides-for-girls-1778643590268-1001094619.jpg"
+    ],
+    "brand": "Birkenstock",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "isBestSeller": false
   }
 ]

@@ -668,5 +668,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778644309120",
+    "name": "Converse cocola edition limited stock",
+    "description": "",
+    "price": 4199,
+    "offerPrice": 3300,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778644260634-product-1778644257756-1001094707.jpg"
+    ],
+    "brand": "Converse",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

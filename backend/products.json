@@ -543,5 +543,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778643552710",
+    "name": "Nike dunk low northface white grey",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2799,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778643549856-nike-dunk-low-northface-white-grey-1778643547198-1001094656.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

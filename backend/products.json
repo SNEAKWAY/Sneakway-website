@@ -584,5 +584,26 @@
       40
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778644133907",
+    "name": "Nike Airforce undeafeted white grey",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778644066081-product-1778644063336-1001094688.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

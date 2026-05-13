@@ -482,5 +482,25 @@
       40
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778643356529",
+    "name": "Adidas campus green for girls",
+    "description": "",
+    "price": 3000,
+    "offerPrice": 2300,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778643349507-adidas-campus-green-for-girls-1778643346679-1001094658.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "isBestSeller": false
   }
 ]

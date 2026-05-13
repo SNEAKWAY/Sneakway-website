@@ -983,5 +983,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778645459089",
+    "name": "Nike airforce North face white grey",
+    "description": "",
+    "price": 3999,
+    "offerPrice": 2899,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778645416284-product-1778645413518-1001094692.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

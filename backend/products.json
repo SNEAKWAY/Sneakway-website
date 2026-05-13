@@ -1990,5 +1990,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778665300942",
+    "name": "Asics kayano imp",
+    "description": "",
+    "price": 2900,
+    "offerPrice": 1999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778665268057-product-1778665266387-1001095236.jpg"
+    ],
+    "brand": "Asics",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

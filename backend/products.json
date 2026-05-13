@@ -2032,5 +2032,19 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778665412546",
+    "name": "Adidas  jellyfish imp",
+    "description": "",
+    "price": 2700,
+    "offerPrice": 1999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778665409619-adidas-jellyfish-imp-1778665407713-1001095233.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [],
+    "isBestSeller": false
   }
 ]

@@ -626,5 +626,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778644225732",
+    "name": "Converse Chuck 70s sketch hi black",
+    "description": "",
+    "price": 3999,
+    "offerPrice": 3399,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778644175898-product-1778644173052-1001094710.jpg"
+    ],
+    "brand": "Converse",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

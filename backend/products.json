@@ -647,5 +647,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778644253798",
+    "name": "Nike jordan low black",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2699,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778644231376-product-1778644229436-1001094708.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

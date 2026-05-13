@@ -1927,5 +1927,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778665098407",
+    "name": "Nike Air jordan high imp",
+    "description": "",
+    "price": 2500,
+    "offerPrice": 1899,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778665094023-nike-air-jordan-high-imp-1778665091795-1001095284.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

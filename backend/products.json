@@ -2274,5 +2274,27 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778773723989",
+    "name": "Adidas samba 6a",
+    "description": "",
+    "price": 1900,
+    "offerPrice": 1099,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778773679010-product-1778773676763-1001095091.jpg",
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778773681211-product-1778773679582-1001095089.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

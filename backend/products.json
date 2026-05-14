@@ -2599,5 +2599,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778780737378",
+    "name": "Nb 9069 green",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778780734152-nb-9069-green-1778780732141-1001095030.jpg"
+    ],
+    "brand": "New Balance",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

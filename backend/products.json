@@ -2231,5 +2231,27 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778773563572",
+    "name": "Nb 9060 7@",
+    "description": "",
+    "price": 2500,
+    "offerPrice": 1899,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778773541783-product-1778773539925-1001095174.jpg",
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778773543956-product-1778773542103-1001095173.jpg"
+    ],
+    "brand": "New Balance",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

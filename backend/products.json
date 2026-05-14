@@ -2578,5 +2578,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778780693747",
+    "name": "Nb 9060 black",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778780690856-nb-9060-black-1778780688929-1001095034.jpg"
+    ],
+    "brand": "New Balance",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

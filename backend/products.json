@@ -2516,5 +2516,25 @@
       40
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778780420287",
+    "name": "Puma speed cat ballet premium",
+    "description": "",
+    "price": 3600,
+    "offerPrice": 2599,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778780417289-puma-speed-cat-ballet-premium-1778780415412-1001100887.jpg"
+    ],
+    "brand": "Puma",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "isBestSeller": false
   }
 ]

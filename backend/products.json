@@ -2209,5 +2209,27 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778773502959",
+    "name": "Adidas slide",
+    "description": "",
+    "price": 2000,
+    "offerPrice": 1099,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778773475824-product-1778773473708-1001095176.jpg",
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778773478102-product-1778773476336-1001095175.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

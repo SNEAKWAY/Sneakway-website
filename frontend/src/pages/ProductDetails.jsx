@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import ImageCarousel from "../components/ImageCarousel.jsx";
 
 const API_URL = import.meta.env.VITE_API_URL;
-const WHATSAPP_BASE = "https://wa.me/916282365256";
+const WHATSAPP_BASE = "https://wa.me/918590138509";
 
 const formatPrice = (value) =>
   new Intl.NumberFormat("en-IN", {

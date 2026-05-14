@@ -2167,5 +2167,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778773356811",
+    "name": "Crocs yukon",
+    "description": "",
+    "price": 2099,
+    "offerPrice": 1699,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778773353731-crocs-yukon-1778773351525-1001095200.jpg"
+    ],
+    "brand": "Crocs",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

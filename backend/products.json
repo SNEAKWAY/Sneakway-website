@@ -3465,5 +3465,25 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778865275759",
+    "name": "Puma speed cat for girls",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2699,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778865250945-product-1778865248796-1001102838.jpg"
+    ],
+    "brand": "Puma",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "isBestSeller": false
   }
 ]

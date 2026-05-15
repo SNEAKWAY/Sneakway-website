@@ -3672,5 +3672,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778866381487",
+    "name": "Converse cococola edition black",
+    "description": "",
+    "price": 4500,
+    "offerPrice": 3400,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778866358609-product-1778866354425-1001102825.jpg"
+    ],
+    "brand": "Converse",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

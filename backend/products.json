@@ -3506,5 +3506,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778865381252",
+    "name": "Diesel Chelsea boots",
+    "description": "",
+    "price": 2500,
+    "offerPrice": 1900,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778865348754-product-1778865346776-1001102835.jpg"
+    ],
+    "brand": "Diesel",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

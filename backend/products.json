@@ -3214,5 +3214,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778864600568",
+    "name": "Nike Air muse silver black",
+    "description": "",
+    "price": 4500,
+    "offerPrice": 3400,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778864569039-product-1778864566549-1001102857.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

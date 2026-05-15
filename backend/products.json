@@ -2846,5 +2846,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778861785506",
+    "name": "Nike mind 02",
+    "description": "",
+    "price": 5000,
+    "offerPrice": 3500,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778861753999-product-1778861751708-1001102943.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

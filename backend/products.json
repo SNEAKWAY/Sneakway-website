@@ -3339,5 +3339,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778864814599",
+    "name": "Birkenstock sandal",
+    "description": "",
+    "price": 2500,
+    "offerPrice": 1600,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778864793418-product-1778864791390-1001102851.jpg"
+    ],
+    "brand": "Birkenstock",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

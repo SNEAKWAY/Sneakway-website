@@ -3568,5 +3568,26 @@
       40
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778866213916",
+    "name": "Nike killshot",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778866196605-product-1778866193789-1001102832.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

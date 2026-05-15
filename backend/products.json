@@ -2930,5 +2930,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778861999678",
+    "name": "Puma speed cat silver",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2800,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778861919025-product-1778861916315-1001102871.jpg"
+    ],
+    "brand": "Puma",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

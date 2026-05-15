@@ -2909,5 +2909,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778861911158",
+    "name": "Nike Airforce ambush black",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2700,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778861883025-product-1778861880651-1001102880.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

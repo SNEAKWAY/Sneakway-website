@@ -3277,5 +3277,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778864700560",
+    "name": "Converse black custom model",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 3300,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778864676282-product-1778864673857-1001102854.jpg"
+    ],
+    "brand": "Converse",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

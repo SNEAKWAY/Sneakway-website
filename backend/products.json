@@ -2951,5 +2951,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778862041760",
+    "name": "Nike dunk low year of the dragon",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778862009125-product-1778862006964-1001102870.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

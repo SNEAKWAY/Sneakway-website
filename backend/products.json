@@ -3485,5 +3485,26 @@
       40
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778865342591",
+    "name": "Onistuka tiger ballet black",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2799,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778865304767-product-1778865302070-1001102836.jpg"
+    ],
+    "brand": "Onistuka",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

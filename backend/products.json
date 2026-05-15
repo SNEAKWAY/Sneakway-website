@@ -3018,5 +3018,25 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778862143788",
+    "name": "Adidas campus ladies",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2099,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778862111857-product-1778862110291-1001102867.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "isBestSeller": false
   }
 ]

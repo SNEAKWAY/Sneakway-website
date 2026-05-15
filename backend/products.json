@@ -3298,5 +3298,25 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778864735245",
+    "name": "Adidas samba jane for girls",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2699,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778864707335-product-1778864704881-1001102853.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "isBestSeller": false
   }
 ]

@@ -2821,5 +2821,30 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778809171152",
+    "name": "Airforce one white semi ua combo",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 2500,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778809168855-airforce-one-white-semi-ua-combo-1778809166663-1001096587.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

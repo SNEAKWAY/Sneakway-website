@@ -3235,5 +3235,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778864636309",
+    "name": "Adidas samba Atmos black silver",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778864609325-product-1778864607259-1001102856.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

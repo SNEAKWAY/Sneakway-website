@@ -3423,5 +3423,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778864942435",
+    "name": "Nb 1906A black",
+    "description": "",
+    "price": 4800,
+    "offerPrice": 3650,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778864908956-product-1778864906444-1001102844.jpg"
+    ],
+    "brand": "New Balance",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

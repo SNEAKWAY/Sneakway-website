@@ -3693,5 +3693,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778866413954",
+    "name": "Nike p-6000 black grey",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778866390741-product-1778866387129-1001102822.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

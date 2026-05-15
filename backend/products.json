@@ -2997,5 +2997,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778862105544",
+    "name": "Birkenstock boston",
+    "description": "",
+    "price": 3000,
+    "offerPrice": 1600,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778862083603-product-1778862081708-1001102868.jpg"
+    ],
+    "brand": "Birkenstock",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

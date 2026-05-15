@@ -3064,5 +3064,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778862952885",
+    "name": "Nike dunk low skateboard",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2899,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778862909117-product-1778862907101-1001102865.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

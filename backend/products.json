@@ -3609,5 +3609,26 @@
       40
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778866284728",
+    "name": "Nike dunk low olive green",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 2899,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778866255986-product-1778866253087-1001102830.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

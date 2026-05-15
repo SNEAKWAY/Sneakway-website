@@ -3589,5 +3589,25 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778866246353",
+    "name": "Onistuka tiger ballet white rose",
+    "description": "",
+    "price": 2800,
+    "offerPrice": 2799,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778866220801-product-1778866217632-1001102831.jpg"
+    ],
+    "brand": "Onistuka",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "isBestSeller": false
   }
 ]

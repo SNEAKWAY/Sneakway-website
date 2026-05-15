@@ -3085,5 +3085,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778862996910",
+    "name": "Onistuka tiger silver edition",
+    "description": "",
+    "price": 3200,
+    "offerPrice": 2799,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778862962237-product-1778862960558-1001102864.jpg"
+    ],
+    "brand": "Onistuka",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

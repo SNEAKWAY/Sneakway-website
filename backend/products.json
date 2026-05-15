@@ -2769,5 +2769,31 @@
       40
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778809080572",
+    "name": "Adidas samba white and black",
+    "description": "",
+    "price": 3000,
+    "offerPrice": 2500,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778809048550-product-1778809046257-1001094920.jpg",
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778809051003-product-1778809049093-1001094924.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

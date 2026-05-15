@@ -2795,5 +2795,31 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778809134220",
+    "name": "Adidas superstar white and bllack",
+    "description": "",
+    "price": 3000,
+    "offerPrice": 2500,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778809101642-product-1778809099488-1001094916.jpg",
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778809103741-product-1778809102095-1001094915.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

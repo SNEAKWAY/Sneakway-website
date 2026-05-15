@@ -2888,5 +2888,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778861876445",
+    "name": "Adidas superstar red lace custom",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778861833766-product-1778861831896-1001102881.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

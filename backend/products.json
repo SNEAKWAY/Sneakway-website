@@ -3360,5 +3360,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778864846009",
+    "name": "Zara denim sandal",
+    "description": "",
+    "price": 2500,
+    "offerPrice": 1600,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778864825785-product-1778864823840-1001102850.jpg"
+    ],
+    "brand": "Zara",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

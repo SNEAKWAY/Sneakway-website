@@ -3444,5 +3444,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778865245600",
+    "name": "Nb 1906a blue",
+    "description": "",
+    "price": 4800,
+    "offerPrice": 3650,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778865148956-product-1778865146492-1001102843.jpg"
+    ],
+    "brand": "New Balance",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

@@ -3038,5 +3038,31 @@
       40
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778862579822",
+    "name": "Adidas samba green grey",
+    "description": "",
+    "price": 2500,
+    "offerPrice": 1800,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778862532766-product-1778862529575-1001102866.jpg",
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778862572836-adidas-samba-green-grey-1778862569893-1001102866.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

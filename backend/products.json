@@ -3630,5 +3630,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778866320560",
+    "name": "Zara sandals",
+    "description": "",
+    "price": 2500,
+    "offerPrice": 1600,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778866297342-product-1778866292609-1001102829.jpg"
+    ],
+    "brand": "Zara",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

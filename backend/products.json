@@ -3106,5 +3106,25 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778863153503",
+    "name": "Nb 530 girls",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2899,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778863127188-product-1778863124449-1001102863.jpg"
+    ],
+    "brand": "New Balance",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "isBestSeller": false
   }
 ]

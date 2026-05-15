@@ -3172,5 +3172,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778864506046",
+    "name": "Nike nocta  2025 white",
+    "description": "",
+    "price": 5000,
+    "offerPrice": 3600,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778864476849-product-1778864475174-1001102859.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

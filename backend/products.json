@@ -3714,5 +3714,25 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778916842147",
+    "name": "Onistuka tiger black for girls",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2799,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778916804148-product-1778916798940-1001102818.jpg"
+    ],
+    "brand": "Onistuka",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "isBestSeller": false
   }
 ]

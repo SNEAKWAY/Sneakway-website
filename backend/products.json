@@ -4296,5 +4296,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778918089991",
+    "name": "Calvin Klein loafer",
+    "description": "",
+    "price": 5000,
+    "offerPrice": 1800,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778918073430-product-1778918071038-1001102566.jpg"
+    ],
+    "brand": "Calvin Klein",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

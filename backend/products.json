@@ -4036,5 +4036,30 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778917576630",
+    "name": "Nike tenko",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 3100,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778917554913-product-1778917551901-1001102730.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

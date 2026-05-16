@@ -3826,5 +3826,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778917022793",
+    "name": "Nb 1906A grey",
+    "description": "",
+    "price": 4500,
+    "offerPrice": 3650,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778916992647-product-1778916989080-1001102786.jpg"
+    ],
+    "brand": "New Balance",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

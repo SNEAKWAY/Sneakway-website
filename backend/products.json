@@ -4317,5 +4317,27 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778918120775",
+    "name": "Zara chelsea",
+    "description": "",
+    "price": 3000,
+    "offerPrice": 1799,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778918103427-product-1778918100850-1001102563.jpg",
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778918106056-product-1778918103995-1001102564.jpg"
+    ],
+    "brand": "Zara",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

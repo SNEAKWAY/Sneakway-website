@@ -4233,5 +4233,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778917958177",
+    "name": "Puma palmanero",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 2899,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778917936243-product-1778917934142-1001102578.jpg"
+    ],
+    "brand": "Puma",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

@@ -4128,5 +4128,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778917803527",
+    "name": "Onistuka tiger mexico 66 yellow",
+    "description": "",
+    "price": 4500,
+    "offerPrice": 2899,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778917764456-product-1778917762157-1001102589.jpg"
+    ],
+    "brand": "Onistuka",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

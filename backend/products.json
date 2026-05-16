@@ -3780,5 +3780,30 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778916957627",
+    "name": "Adidas superstar bape white unisex",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778916929073-product-1778916923107-1001102809.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

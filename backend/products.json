@@ -3734,5 +3734,26 @@
       40
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778916883394",
+    "name": "Puma speed cat royal blue for girls",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2799,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778916848527-product-1778916845776-1001102815.jpg"
+    ],
+    "brand": "Puma",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

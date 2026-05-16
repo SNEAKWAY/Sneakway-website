@@ -3916,13 +3916,20 @@
     "name": "Asics kayano",
     "description": "",
     "price": 4700,
-    "offerPrice": 2,
+    "offerPrice": 3500,
     "images": [
       "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778917165826-product-1778917160772-1001102782.jpg"
     ],
     "brand": "Asics",
     "category": "Shoes",
-    "sizes": [],
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
     "isBestSeller": false
   }
 ]

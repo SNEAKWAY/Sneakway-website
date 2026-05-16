@@ -4103,5 +4103,30 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778917746540",
+    "name": "Puma speed cat black unisex",
+    "description": "",
+    "price": 3500,
+    "offerPrice": 2899,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778917723270-product-1778917720729-1001102727.jpg"
+    ],
+    "brand": "Puma",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

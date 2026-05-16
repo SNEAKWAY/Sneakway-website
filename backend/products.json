@@ -4082,5 +4082,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778917706334",
+    "name": "Nike p-6000",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 3099,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778917661494-product-1778917658553-1001102728.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

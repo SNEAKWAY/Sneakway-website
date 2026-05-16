@@ -4191,5 +4191,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778917894744",
+    "name": "Nike Air jordan high black red",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778917870090-product-1778917867320-1001102585.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

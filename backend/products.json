@@ -3755,5 +3755,30 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778916917934",
+    "name": "Adidas superstar bape black unisex",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778916895502-product-1778916890910-1001102810.jpg"
+    ],
+    "brand": "Adidas",
+    "category": "Shoes",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

@@ -3952,5 +3952,26 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778917279380",
+    "name": "Nike p-6000 black white",
+    "description": "",
+    "price": 4000,
+    "offerPrice": 2999,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778917259172-product-1778917257250-1001102768.jpg"
+    ],
+    "brand": "Nike",
+    "category": "Shoes",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "isBestSeller": false
   }
 ]

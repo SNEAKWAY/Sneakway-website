@@ -3910,5 +3910,19 @@
       45
     ],
     "isBestSeller": false
+  },
+  {
+    "id": "1778917181612",
+    "name": "Asics kayano",
+    "description": "",
+    "price": 4700,
+    "offerPrice": 2,
+    "images": [
+      "https://raw.githubusercontent.com/SNEAKWAY/Sneakway-website/main/frontend/public/uploads/1778917165826-product-1778917160772-1001102782.jpg"
+    ],
+    "brand": "Asics",
+    "category": "Shoes",
+    "sizes": [],
+    "isBestSeller": false
   }
 ]

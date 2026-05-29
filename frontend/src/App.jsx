@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import ProductDetails from "./pages/ProductDetails.jsx";
-import Admin from "./pages/Admin.jsx";
+import AdminDashboard from "./pages/AdminDashboard.jsx";
 import AdminLogin from "./pages/AdminLogin.jsx";
 import { isAuthed, subscribeToAuth } from "./utils/auth.js";
 
@@ -33,8 +33,15 @@ const App = () => {
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route
             path="/admin"
-            element={authed ? <Admin /> : <Navigate to="/admin/login" />}
+            element={
+              authed ? (
+                <AdminDashboard />
+              ) : (
+                <Navigate to="/admin/login" replace />
+              )
+            }
           />
+          <Route path="/admin/*" element={<Navigate to="/admin" replace />} />
         </Routes>
       </main>
 

@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { clearAuthToken, getAuthHeader } from "../utils/auth.js";
+import { getAuthHeader } from "../utils/auth.js";
 
 const API_URL = import.meta.env.VITE_API_URL;
 const emptyForm = {
@@ -66,7 +65,6 @@ const isShoeProduct = (product) => {
 };
 
 const Admin = () => {
-  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [form, setForm] = useState(emptyForm);
   const [brandOptions, setBrandOptions] = useState(BASE_BRAND_OPTIONS);
@@ -403,10 +401,9 @@ const Admin = () => {
   };
 
   return (
-    <section className="section">
+    <>
       <div>
-        <p className="eyebrow">Studio</p>
-        <h1 className="section-title">Catalog management</h1>
+        <h2 className="section-title">Catalog management</h2>
         <p className="section-subtitle">
           Add, edit, and compose the inventory — same tools as the reference
           site, styled for Sneakway.
@@ -427,17 +424,6 @@ const Admin = () => {
               </button>
             )}
           </div>
-          <button
-            type="button"
-            onClick={() => {
-              clearAuthToken();
-              navigate("/admin/login", { replace: true });
-            }}
-            className="button button--outline"
-            style={{ justifySelf: "flex-start" }}
-          >
-            Logout
-          </button>
           <label className="form__label">
             Name
             <input
@@ -854,7 +840,7 @@ const Admin = () => {
             <p className="helper">No products match your search.</p>
           )}
         </div>
-    </section>
+    </>
   );
 };
 

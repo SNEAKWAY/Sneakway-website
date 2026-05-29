@@ -16,11 +16,17 @@ const GITHUB_IMAGES_PATH =
 const GITHUB_PRODUCTS_PATH =
   process.env.GITHUB_PRODUCTS_PATH || "backend/products.json";
 const GITHUB_SALE_PATH = process.env.GITHUB_SALE_PATH || "backend/sale.json";
+const GITHUB_ORDERS_PATH =
+  process.env.GITHUB_ORDERS_PATH || "backend/orders.json";
+const GITHUB_EXPENSES_PATH =
+  process.env.GITHUB_EXPENSES_PATH || "backend/expenses.json";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const dataPath = path.join(__dirname, "products.json");
 const salePath = path.join(__dirname, "sale.json");
+const ordersPath = path.join(__dirname, "orders.json");
+const expensesPath = path.join(__dirname, "expenses.json");
 
 app.use(cors());
 app.use(express.json({ limit: "15mb" }));
@@ -318,6 +324,214 @@ const writeSale = async (sale) => {
   await fs.writeFile(salePath, JSON.stringify(sale, null, 2));
 };
 
+const readOrdersFromGithub = async (config) => {
+  const apiUrl = `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${GITHUB_ORDERS_PATH}?ref=${config.branch}`;
+  const response = await fetch(apiUrl, {
+    headers: {
+      Authorization: `Bearer ${config.token}`,
+      Accept: "application/vnd.github+json",
+      "User-Agent": "xypht-backend",
+    },
+  });
+
+  if (response.status === 404) {
+    return [];
+  }
+
+  if (!response.ok) {
+    const errorBody = await response.json().catch(() => ({}));
+    throw new Error(
+      errorBody?.message || "Failed to read orders from GitHub.",
+    );
+  }
+
+  const payload = await response.json();
+  const content = Buffer.from(payload.content || "", "base64").toString("utf-8");
+  return safeJsonParse(content || "[]", [], "orders.json from GitHub");
+};
+
+const writeOrdersToGithub = async (config, orders) => {
+  const apiUrl = `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${GITHUB_ORDERS_PATH}`;
+  const existingResponse = await fetch(`${apiUrl}?ref=${config.branch}`, {
+    headers: {
+      Authorization: `Bearer ${config.token}`,
+      Accept: "application/vnd.github+json",
+      "User-Agent": "xypht-backend",
+    },
+  });
+
+  let sha;
+  if (existingResponse.ok) {
+    const existingPayload = await existingResponse.json();
+    sha = existingPayload?.sha;
+  }
+
+  const response = await fetch(apiUrl, {
+    method: "PUT",
+    headers: {
+      Authorization: `Bearer ${config.token}`,
+      Accept: "application/vnd.github+json",
+      "Content-Type": "application/json",
+      "User-Agent": "xypht-backend",
+    },
+    body: JSON.stringify({
+      message: "Update orders.json",
+      content: Buffer.from(JSON.stringify(orders, null, 2)).toString("base64"),
+      branch: config.branch,
+      sha,
+    }),
+  });
+
+  if (!response.ok) {
+    const errorBody = await response.json().catch(() => ({}));
+    throw new Error(
+      errorBody?.message || "Failed to write orders to GitHub.",
+    );
+  }
+};
+
+const readOrders = async () => {
+  const githubConfig = getGithubConfig();
+  if (githubConfig && GITHUB_ORDERS_PATH) {
+    try {
+      return await readOrdersFromGithub(githubConfig);
+    } catch (error) {
+      console.error("Failed to read orders from GitHub. Falling back.", error);
+    }
+  }
+
+  try {
+    const raw = await fs.readFile(ordersPath, "utf-8");
+    return safeJsonParse(raw, [], "orders.json from disk");
+  } catch (error) {
+    if (error.code === "ENOENT") {
+      return [];
+    }
+    console.error("Failed to read orders from disk.", error);
+    return [];
+  }
+};
+
+const writeOrders = async (orders) => {
+  const githubConfig = getGithubConfig();
+  if (githubConfig && GITHUB_ORDERS_PATH) {
+    await writeOrdersToGithub(githubConfig, orders);
+    return;
+  }
+
+  await fs.writeFile(ordersPath, JSON.stringify(orders, null, 2));
+};
+
+const sanitizeOrderFields = (body) => ({
+  customerName: String(body.customerName || "").trim(),
+  trackingId: String(body.trackingId || "").trim(),
+  customerPrice: Number(body.customerPrice) || 0,
+  profit: Number(body.profit) || 0,
+});
+
+const readExpensesFromGithub = async (config) => {
+  const apiUrl = `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${GITHUB_EXPENSES_PATH}?ref=${config.branch}`;
+  const response = await fetch(apiUrl, {
+    headers: {
+      Authorization: `Bearer ${config.token}`,
+      Accept: "application/vnd.github+json",
+      "User-Agent": "xypht-backend",
+    },
+  });
+
+  if (response.status === 404) {
+    return [];
+  }
+
+  if (!response.ok) {
+    const errorBody = await response.json().catch(() => ({}));
+    throw new Error(
+      errorBody?.message || "Failed to read expenses from GitHub.",
+    );
+  }
+
+  const payload = await response.json();
+  const content = Buffer.from(payload.content || "", "base64").toString("utf-8");
+  return safeJsonParse(content || "[]", [], "expenses.json from GitHub");
+};
+
+const writeExpensesToGithub = async (config, expenses) => {
+  const apiUrl = `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${GITHUB_EXPENSES_PATH}`;
+  const existingResponse = await fetch(`${apiUrl}?ref=${config.branch}`, {
+    headers: {
+      Authorization: `Bearer ${config.token}`,
+      Accept: "application/vnd.github+json",
+      "User-Agent": "xypht-backend",
+    },
+  });
+
+  let sha;
+  if (existingResponse.ok) {
+    const existingPayload = await existingResponse.json();
+    sha = existingPayload?.sha;
+  }
+
+  const response = await fetch(apiUrl, {
+    method: "PUT",
+    headers: {
+      Authorization: `Bearer ${config.token}`,
+      Accept: "application/vnd.github+json",
+      "Content-Type": "application/json",
+      "User-Agent": "xypht-backend",
+    },
+    body: JSON.stringify({
+      message: "Update expenses.json",
+      content: Buffer.from(JSON.stringify(expenses, null, 2)).toString("base64"),
+      branch: config.branch,
+      sha,
+    }),
+  });
+
+  if (!response.ok) {
+    const errorBody = await response.json().catch(() => ({}));
+    throw new Error(
+      errorBody?.message || "Failed to write expenses to GitHub.",
+    );
+  }
+};
+
+const readExpenses = async () => {
+  const githubConfig = getGithubConfig();
+  if (githubConfig && GITHUB_EXPENSES_PATH) {
+    try {
+      return await readExpensesFromGithub(githubConfig);
+    } catch (error) {
+      console.error("Failed to read expenses from GitHub. Falling back.", error);
+    }
+  }
+
+  try {
+    const raw = await fs.readFile(expensesPath, "utf-8");
+    return safeJsonParse(raw, [], "expenses.json from disk");
+  } catch (error) {
+    if (error.code === "ENOENT") {
+      return [];
+    }
+    console.error("Failed to read expenses from disk.", error);
+    return [];
+  }
+};
+
+const writeExpenses = async (expenses) => {
+  const githubConfig = getGithubConfig();
+  if (githubConfig && GITHUB_EXPENSES_PATH) {
+    await writeExpensesToGithub(githubConfig, expenses);
+    return;
+  }
+
+  await fs.writeFile(expensesPath, JSON.stringify(expenses, null, 2));
+};
+
+const sanitizeExpenseFields = (body) => ({
+  name: String(body.name || "").trim(),
+  amount: Number(body.amount) || 0,
+});
+
 app.get("/products", async (_req, res) => {
   try {
     const products = await readProducts();
@@ -584,6 +798,164 @@ app.delete("/products/:id", requireAdmin, async (req, res) => {
       message: "Failed to delete product.",
       details: error?.message || String(error),
     });
+  }
+});
+
+app.get("/orders", requireAdmin, async (_req, res) => {
+  try {
+    const orders = await readOrders();
+    res.json(orders);
+  } catch (error) {
+    res.status(500).json({ message: "Failed to read orders." });
+  }
+});
+
+app.post("/orders", requireAdmin, async (req, res) => {
+  try {
+    const fields = sanitizeOrderFields(req.body);
+    if (!fields.customerName) {
+      return res.status(400).json({
+        message: "Customer name is required.",
+      });
+    }
+
+    const orders = await readOrders();
+    const newOrder = {
+      id: Date.now().toString(),
+      ...fields,
+      createdAt: new Date().toISOString(),
+    };
+
+    orders.push(newOrder);
+    await writeOrders(orders);
+    res.status(201).json(newOrder);
+  } catch (error) {
+    console.error("Failed to create order.", error);
+    res.status(500).json({ message: "Failed to create order." });
+  }
+});
+
+app.put("/orders/:id", requireAdmin, async (req, res) => {
+  try {
+    const orders = await readOrders();
+    const index = orders.findIndex((item) => item.id === req.params.id);
+
+    if (index === -1) {
+      return res.status(404).json({ message: "Order not found." });
+    }
+
+    const fields = sanitizeOrderFields(req.body);
+    if (!fields.customerName) {
+      return res.status(400).json({
+        message: "Customer name is required.",
+      });
+    }
+
+    const updated = {
+      ...orders[index],
+      ...fields,
+    };
+
+    orders[index] = updated;
+    await writeOrders(orders);
+    res.json(updated);
+  } catch (error) {
+    console.error("Failed to update order.", error);
+    res.status(500).json({ message: "Failed to update order." });
+  }
+});
+
+app.delete("/orders/:id", requireAdmin, async (req, res) => {
+  try {
+    const orders = await readOrders();
+    const filtered = orders.filter((item) => item.id !== req.params.id);
+
+    if (filtered.length === orders.length) {
+      return res.status(404).json({ message: "Order not found." });
+    }
+
+    await writeOrders(filtered);
+    res.json({ message: "Order deleted." });
+  } catch (error) {
+    console.error("Failed to delete order.", error);
+    res.status(500).json({ message: "Failed to delete order." });
+  }
+});
+
+app.get("/expenses", requireAdmin, async (_req, res) => {
+  try {
+    const expenses = await readExpenses();
+    res.json(expenses);
+  } catch (error) {
+    res.status(500).json({ message: "Failed to read expenses." });
+  }
+});
+
+app.post("/expenses", requireAdmin, async (req, res) => {
+  try {
+    const fields = sanitizeExpenseFields(req.body);
+    if (!fields.name) {
+      return res.status(400).json({ message: "Expense name is required." });
+    }
+
+    const expenses = await readExpenses();
+    const newExpense = {
+      id: Date.now().toString(),
+      ...fields,
+      createdAt: new Date().toISOString(),
+    };
+
+    expenses.push(newExpense);
+    await writeExpenses(expenses);
+    res.status(201).json(newExpense);
+  } catch (error) {
+    console.error("Failed to create expense.", error);
+    res.status(500).json({ message: "Failed to create expense." });
+  }
+});
+
+app.put("/expenses/:id", requireAdmin, async (req, res) => {
+  try {
+    const expenses = await readExpenses();
+    const index = expenses.findIndex((item) => item.id === req.params.id);
+
+    if (index === -1) {
+      return res.status(404).json({ message: "Expense not found." });
+    }
+
+    const fields = sanitizeExpenseFields(req.body);
+    if (!fields.name) {
+      return res.status(400).json({ message: "Expense name is required." });
+    }
+
+    const updated = {
+      ...expenses[index],
+      ...fields,
+    };
+
+    expenses[index] = updated;
+    await writeExpenses(expenses);
+    res.json(updated);
+  } catch (error) {
+    console.error("Failed to update expense.", error);
+    res.status(500).json({ message: "Failed to update expense." });
+  }
+});
+
+app.delete("/expenses/:id", requireAdmin, async (req, res) => {
+  try {
+    const expenses = await readExpenses();
+    const filtered = expenses.filter((item) => item.id !== req.params.id);
+
+    if (filtered.length === expenses.length) {
+      return res.status(404).json({ message: "Expense not found." });
+    }
+
+    await writeExpenses(filtered);
+    res.json({ message: "Expense deleted." });
+  } catch (error) {
+    console.error("Failed to delete expense.", error);
+    res.status(500).json({ message: "Failed to delete expense." });
   }
 });
 

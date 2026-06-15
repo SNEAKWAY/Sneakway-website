@@ -76,5 +76,11 @@
     "name": "Note pen",
     "amount": 28,
     "createdAt": "2026-06-14T13:41:37.118Z"
+  },
+  {
+    "id": "1781515895390",
+    "name": "Cod",
+    "amount": 500,
+    "createdAt": "2026-06-15T09:31:35.390Z"
   }
 ]

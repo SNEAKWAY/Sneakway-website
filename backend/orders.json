@@ -1096,15 +1096,5 @@
     "createdAt": "2026-07-10T13:44:54.404Z",
     "customerPhone": "7907607583",
     "orderType": "retail"
-  },
-  {
-    "id": "1784977793239",
-    "customerName": "Risvan",
-    "customerPhone": "6282365256",
-    "trackingId": "",
-    "customerPrice": 2599,
-    "profit": 500,
-    "orderType": "retail",
-    "createdAt": "2026-07-25T11:09:53.239Z"
   }
 ]

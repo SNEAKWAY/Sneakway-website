@@ -958,13 +958,5 @@
     "customerPrice": 2049,
     "profit": 100,
     "createdAt": "2026-07-05T08:33:01.907Z"
-  },
-  {
-    "id": "1783240410005",
-    "customerName": "*Shipping Address Details* ----------------------------------------  Name : Sumesh Babu S Address : Sri Ramachandra Institute Of Higher Education And Research,Porur,Chennai Landmark:Sri Ramachandra Hospital,Porur  District : Chennai State : Tamilnadu Pincode : 600116  Mobile number 1 : 8714429719 Mobile Number 2 : 8714429719  Size : 7- safety box",
-    "trackingId": "Resellering",
-    "customerPrice": 2680,
-    "profit": 130,
-    "createdAt": "2026-07-05T08:33:30.005Z"
   }
 ]

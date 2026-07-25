@@ -1146,15 +1146,5 @@
     "profit": 500,
     "orderType": "retail",
     "createdAt": "2026-07-25T11:25:48.219Z"
-  },
-  {
-    "id": "1784978970968",
-    "customerName": "Adhil",
-    "customerPhone": "62356 25418",
-    "trackingId": "",
-    "customerPrice": 2500,
-    "profit": 500,
-    "orderType": "retail",
-    "createdAt": "2026-07-25T11:29:30.968Z"
   }
 ]

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Sneakway">
+  <rect width="240" height="240" rx="28" fill="#111111"/>
+  <path
+    d="M48 78c28-22 68-26 96-8 18 12 22 28 8 40-12 10-34 12-52 8-14-3-28-4-38 4-8 6-10 16-2 24 12 12 42 14 70 6 22-6 44-18 62-34"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="14"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <circle cx="178" cy="158" r="10" fill="#ffffff"/>
+</svg>

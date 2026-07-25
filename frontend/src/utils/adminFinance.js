@@ -12,6 +12,24 @@ export const formatMonthLabel = (key) => {
   return date.toLocaleDateString(undefined, { month: "long", year: "numeric" });
 };
 
+export const normalizeOrderType = (value) =>
+  value === "reselling" ? "reselling" : "retail";
+
+export const splitOrdersByType = (orders) => {
+  const retail = [];
+  const reselling = [];
+
+  for (const order of orders) {
+    if (normalizeOrderType(order.orderType) === "reselling") {
+      reselling.push(order);
+    } else {
+      retail.push(order);
+    }
+  }
+
+  return { retail, reselling };
+};
+
 export const computeOrderInsights = (orders) => {
   const now = new Date();
   const currentKey = monthKey(now);
@@ -114,42 +132,31 @@ export const computeExpenseInsights = (expenses) => {
   };
 };
 
+export const computeChannelInsights = (orders) => {
+  const orderStats = computeOrderInsights(orders);
+  return {
+    orderStats,
+    monthlyHistory: orderStats.monthlyHistory,
+  };
+};
+
+export const computeSplitInsights = (orders, expenses) => {
+  const { retail, reselling } = splitOrdersByType(orders);
+  return {
+    retail: computeChannelInsights(retail),
+    reselling: computeChannelInsights(reselling),
+    expenses: computeExpenseInsights(expenses),
+  };
+};
+
 export const computeCombinedInsights = (orders, expenses) => {
   const orderStats = computeOrderInsights(orders);
   const expenseStats = computeExpenseInsights(expenses);
-  const monthNet = orderStats.monthProfit - expenseStats.monthAmount;
-  const allTimeNet = orderStats.totalProfit - expenseStats.totalAmount;
-
-  const monthKeys = new Set([
-    ...orderStats.monthlyHistory.map((row) => row.key),
-    ...expenseStats.monthlyHistory.map((row) => row.key),
-  ]);
-
-  const combinedMonthly = [...monthKeys]
-    .sort((a, b) => b.localeCompare(a))
-    .map((key) => {
-      const orderRow = orderStats.monthlyHistory.find((row) => row.key === key);
-      const expenseRow = expenseStats.monthlyHistory.find(
-        (row) => row.key === key,
-      );
-      const profit = orderRow?.profit || 0;
-      const expensesTotal = expenseRow?.amount || 0;
-      return {
-        key,
-        label: formatMonthLabel(key),
-        orders: orderRow?.count || 0,
-        revenue: orderRow?.revenue || 0,
-        profit,
-        expenses: expensesTotal,
-        net: profit - expensesTotal,
-      };
-    });
-
   return {
     orderStats,
     expenseStats,
-    monthNet,
-    allTimeNet,
-    combinedMonthly,
+    monthNet: orderStats.monthProfit - expenseStats.monthAmount,
+    allTimeNet: orderStats.totalProfit - expenseStats.totalAmount,
+    combinedMonthly: orderStats.monthlyHistory,
   };
 };

@@ -1,15 +1,22 @@
 import { useEffect, useMemo, useState } from "react";
 import { getAuthHeader } from "../utils/auth.js";
 import { formatMoney } from "../utils/adminFinance.js";
+import {
+  normalizeOrderType,
+  ORDER_TYPES,
+  sendRetailBillOnWhatsApp,
+} from "../utils/orderBilling.js";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
 const emptyOrderForm = {
   id: null,
   customerName: "",
+  customerPhone: "",
   trackingId: "",
   customerPrice: "",
   profit: "",
+  orderType: ORDER_TYPES.retail,
 };
 
 const AdminOrderManagement = () => {
@@ -18,8 +25,10 @@ const AdminOrderManagement = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const [billingId, setBillingId] = useState(null);
 
   const isEditing = Boolean(form.id);
+  const isRetailForm = form.orderType === ORDER_TYPES.retail;
 
   const loadOrders = async () => {
     try {
@@ -49,7 +58,14 @@ const AdminOrderManagement = () => {
       : orders.filter((order) => {
           const name = order.customerName?.toLowerCase() || "";
           const tracking = order.trackingId?.toLowerCase() || "";
-          return name.includes(query) || tracking.includes(query);
+          const phone = order.customerPhone?.toLowerCase() || "";
+          const type = normalizeOrderType(order.orderType);
+          return (
+            name.includes(query) ||
+            tracking.includes(query) ||
+            phone.includes(query) ||
+            type.includes(query)
+          );
         });
 
     return [...list].sort(
@@ -67,9 +83,11 @@ const AdminOrderManagement = () => {
     setForm({
       id: order.id,
       customerName: order.customerName || "",
+      customerPhone: order.customerPhone || "",
       trackingId: order.trackingId || "",
       customerPrice: order.customerPrice ?? "",
       profit: order.profit ?? "",
+      orderType: normalizeOrderType(order.orderType),
     });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -95,15 +113,28 @@ const AdminOrderManagement = () => {
     }
   };
 
+  const handleBillWhatsApp = async (order) => {
+    setBillingId(order.id);
+    try {
+      await sendRetailBillOnWhatsApp(order);
+    } catch (error) {
+      window.alert(error.message || "Could not open WhatsApp bill.");
+    } finally {
+      setBillingId(null);
+    }
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     setIsSaving(true);
 
     const payload = {
       customerName: form.customerName.trim(),
+      customerPhone: form.customerPhone.trim(),
       trackingId: form.trackingId.trim(),
       customerPrice: form.customerPrice,
       profit: form.profit,
+      orderType: form.orderType,
     };
 
     try {
@@ -147,7 +178,8 @@ const AdminOrderManagement = () => {
       <div>
         <h2 className="section-title">Orders</h2>
         <p className="section-subtitle">
-          Customer name, tracking ID (optional), price, and profit.
+          Retail or reselling. Retail orders can generate a PDF bill and open
+          WhatsApp for the customer.
         </p>
       </div>
 
@@ -166,6 +198,18 @@ const AdminOrderManagement = () => {
         </div>
 
         <label className="form__label">
+          Order type
+          <select
+            value={form.orderType}
+            onChange={(event) => updateField("orderType", event.target.value)}
+            className="form__input form__input--full form__select"
+          >
+            <option value={ORDER_TYPES.retail}>Retail</option>
+            <option value={ORDER_TYPES.reselling}>Reselling</option>
+          </select>
+        </label>
+
+        <label className="form__label">
           Customer name
           <input
             type="text"
@@ -176,6 +220,24 @@ const AdminOrderManagement = () => {
             className="form__input form__input--full"
             placeholder="Customer name"
             required
+          />
+        </label>
+
+        <label className="form__label">
+          Customer phone
+          <input
+            type="tel"
+            value={form.customerPhone}
+            onChange={(event) =>
+              updateField("customerPhone", event.target.value)
+            }
+            className="form__input form__input--full"
+            placeholder={
+              isRetailForm
+                ? "WhatsApp number for bill (e.g. 9876543210)"
+                : "Optional phone"
+            }
+            required={isRetailForm}
           />
         </label>
 
@@ -249,7 +311,7 @@ const AdminOrderManagement = () => {
             value={searchTerm}
             onChange={(event) => setSearchTerm(event.target.value)}
             className="form__input"
-            placeholder="Search by name or tracking..."
+            placeholder="Search name, phone, tracking, type..."
             aria-label="Search orders"
             style={{ minWidth: "220px" }}
           />
@@ -258,45 +320,76 @@ const AdminOrderManagement = () => {
         {isLoading ? (
           <div className="loading">Loading orders...</div>
         ) : filteredOrders.length ? (
-          filteredOrders.map((order) => (
-            <div key={order.id} className="list-item order-list-item">
-              <div className="list-item__meta">
-                <p style={{ fontWeight: 600 }}>{order.customerName}</p>
-                <p className="helper">
-                  {order.trackingId
-                    ? `Tracking ${order.trackingId}`
-                    : "No tracking ID yet"}
-                </p>
-                <p className="helper">
-                  Price {formatMoney(order.customerPrice)} · Profit{" "}
-                  {formatMoney(order.profit)}
-                </p>
-                {order.createdAt && (
+          filteredOrders.map((order) => {
+            const type = normalizeOrderType(order.orderType);
+            const isRetail = type === ORDER_TYPES.retail;
+            return (
+              <div key={order.id} className="list-item order-list-item">
+                <div className="list-item__meta">
+                  <p style={{ fontWeight: 600 }}>{order.customerName}</p>
                   <p className="helper">
-                    {new Date(order.createdAt).toLocaleDateString(undefined, {
-                      dateStyle: "medium",
-                    })}
+                    <span className={`order-type-badge order-type-badge--${type}`}>
+                      {type === ORDER_TYPES.reselling ? "Reselling" : "Retail"}
+                    </span>
+                    {order.customerPhone
+                      ? ` · ${order.customerPhone}`
+                      : " · No phone"}
                   </p>
-                )}
-              </div>
-              <div style={{ display: "flex", gap: "8px" }}>
-                <button
-                  type="button"
-                  onClick={() => handleEdit(order)}
-                  className="button button--outline"
+                  <p className="helper">
+                    {order.trackingId
+                      ? `Tracking ${order.trackingId}`
+                      : "No tracking ID yet"}
+                  </p>
+                  <p className="helper">
+                    Price {formatMoney(order.customerPrice)} · Profit{" "}
+                    {formatMoney(order.profit)}
+                  </p>
+                  {order.createdAt && (
+                    <p className="helper">
+                      {new Date(order.createdAt).toLocaleDateString(undefined, {
+                        dateStyle: "medium",
+                      })}
+                    </p>
+                  )}
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    gap: "8px",
+                    flexWrap: "wrap",
+                    justifyContent: "flex-end",
+                  }}
                 >
-                  Edit
-                </button>
-                <button
-                  type="button"
-                  onClick={() => handleDelete(order.id)}
-                  className="button button--outline button--danger"
-                >
-                  Delete
-                </button>
+                  {isRetail && (
+                    <button
+                      type="button"
+                      onClick={() => handleBillWhatsApp(order)}
+                      className="button button--primary"
+                      disabled={billingId === order.id}
+                    >
+                      {billingId === order.id
+                        ? "Opening..."
+                        : "Bill + WhatsApp"}
+                    </button>
+                  )}
+                  <button
+                    type="button"
+                    onClick={() => handleEdit(order)}
+                    className="button button--outline"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleDelete(order.id)}
+                    className="button button--outline button--danger"
+                  >
+                    Delete
+                  </button>
+                </div>
               </div>
-            </div>
-          ))
+            );
+          })
         ) : (
           <p className="helper">No orders yet. Add your first entry above.</p>
         )}

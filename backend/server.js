@@ -335,7 +335,7 @@ const readOrdersFromGithub = async (config) => {
   });
 
   if (response.status === 404) {
-    return [];
+    return { orders: [], sha: null };
   }
 
   if (!response.ok) {
@@ -347,23 +347,50 @@ const readOrdersFromGithub = async (config) => {
 
   const payload = await response.json();
   const content = Buffer.from(payload.content || "", "base64").toString("utf-8");
-  return safeJsonParse(content || "[]", [], "orders.json from GitHub");
+  return {
+    orders: safeJsonParse(content || "[]", [], "orders.json from GitHub"),
+    sha: payload?.sha || null,
+  };
 };
 
-const writeOrdersToGithub = async (config, orders) => {
+const writeOrdersToGithub = async (config, orders, sha) => {
   const apiUrl = `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${GITHUB_ORDERS_PATH}`;
-  const existingResponse = await fetch(`${apiUrl}?ref=${config.branch}`, {
-    headers: {
-      Authorization: `Bearer ${config.token}`,
-      Accept: "application/vnd.github+json",
-      "User-Agent": "xypht-backend",
-    },
-  });
 
-  let sha;
-  if (existingResponse.ok) {
-    const existingPayload = await existingResponse.json();
-    sha = existingPayload?.sha;
+  let nextSha = sha;
+  if (!nextSha) {
+    const existingResponse = await fetch(`${apiUrl}?ref=${config.branch}`, {
+      headers: {
+        Authorization: `Bearer ${config.token}`,
+        Accept: "application/vnd.github+json",
+        "User-Agent": "xypht-backend",
+      },
+    });
+
+    if (existingResponse.ok) {
+      const existingPayload = await existingResponse.json();
+      nextSha = existingPayload?.sha;
+
+      // Guard against accidental mass overwrite (e.g. stale local fallback).
+      const existingContent = Buffer.from(
+        existingPayload.content || "",
+        "base64",
+      ).toString("utf-8");
+      const existingOrders = safeJsonParse(
+        existingContent || "[]",
+        [],
+        "orders.json from GitHub",
+      );
+      if (
+        Array.isArray(existingOrders) &&
+        existingOrders.length > 10 &&
+        orders.length < Math.floor(existingOrders.length * 0.5)
+      ) {
+        throw new Error(
+          `Refusing to overwrite ${existingOrders.length} orders with only ${orders.length}. ` +
+            "This usually means a stale/local read was about to wipe history.",
+        );
+      }
+    }
   }
 
   const response = await fetch(apiUrl, {
@@ -378,7 +405,7 @@ const writeOrdersToGithub = async (config, orders) => {
       message: "Update orders.json",
       content: Buffer.from(JSON.stringify(orders, null, 2)).toString("base64"),
       branch: config.branch,
-      sha,
+      sha: nextSha,
     }),
   });
 
@@ -393,11 +420,10 @@ const writeOrdersToGithub = async (config, orders) => {
 const readOrders = async () => {
   const githubConfig = getGithubConfig();
   if (githubConfig && GITHUB_ORDERS_PATH) {
-    try {
-      return await readOrdersFromGithub(githubConfig);
-    } catch (error) {
-      console.error("Failed to read orders from GitHub. Falling back.", error);
-    }
+    // GitHub is the source of truth when configured. Never fall back to a
+    // possibly empty/stale local file — that previously wiped production history.
+    const { orders } = await readOrdersFromGithub(githubConfig);
+    return orders;
   }
 
   try {
@@ -416,17 +442,32 @@ const writeOrders = async (orders) => {
   const githubConfig = getGithubConfig();
   if (githubConfig && GITHUB_ORDERS_PATH) {
     await writeOrdersToGithub(githubConfig, orders);
+    // Keep a local mirror when possible (best-effort on serverless).
+    try {
+      await fs.writeFile(ordersPath, JSON.stringify(orders, null, 2));
+    } catch (error) {
+      console.error("Failed to mirror orders to disk.", error);
+    }
     return;
   }
 
   await fs.writeFile(ordersPath, JSON.stringify(orders, null, 2));
 };
 
+const sanitizeOrderType = (value) =>
+  String(value || "")
+    .trim()
+    .toLowerCase() === "reselling"
+    ? "reselling"
+    : "retail";
+
 const sanitizeOrderFields = (body) => ({
   customerName: String(body.customerName || "").trim(),
+  customerPhone: String(body.customerPhone || "").trim(),
   trackingId: String(body.trackingId || "").trim(),
   customerPrice: Number(body.customerPrice) || 0,
   profit: Number(body.profit) || 0,
+  orderType: sanitizeOrderType(body.orderType),
 });
 
 const readExpensesFromGithub = async (config) => {

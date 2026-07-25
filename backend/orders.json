@@ -1086,15 +1086,5 @@
     "customerPrice": 2799,
     "profit": 769,
     "createdAt": "2026-07-10T13:44:17.990Z"
-  },
-  {
-    "id": "1783691094404",
-    "customerName": "Dilna",
-    "trackingId": "Prepaid",
-    "customerPrice": 2499,
-    "profit": 500,
-    "createdAt": "2026-07-10T13:44:54.404Z",
-    "customerPhone": "7907607583",
-    "orderType": "retail"
   }
 ]

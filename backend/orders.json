@@ -1116,15 +1116,5 @@
     "profit": 500,
     "orderType": "retail",
     "createdAt": "2026-07-25T11:14:12.964Z"
-  },
-  {
-    "id": "1784978365282",
-    "customerName": "Nopht",
-    "customerPhone": "+91 79076 07583",
-    "trackingId": "",
-    "customerPrice": 2499,
-    "profit": 500,
-    "orderType": "retail",
-    "createdAt": "2026-07-25T11:19:25.282Z"
   }
 ]

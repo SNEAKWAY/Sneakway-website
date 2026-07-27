@@ -232,11 +232,5 @@
     "name": "Boost",
     "amount": 267,
     "createdAt": "2026-07-08T05:36:36.407Z"
-  },
-  {
-    "id": "1783598869322",
-    "name": "Travel expense",
-    "amount": 50,
-    "createdAt": "2026-07-09T12:07:49.322Z"
   }
 ]

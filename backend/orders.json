@@ -38,5 +38,15 @@
     "profit": 300,
     "orderType": "reselling",
     "createdAt": "2026-08-01T15:07:32.067Z"
+  },
+  {
+    "id": "1785653079745",
+    "customerName": "Dhanish",
+    "customerPhone": "6235134395",
+    "trackingId": "",
+    "customerPrice": 2499,
+    "profit": 500,
+    "orderType": "retail",
+    "createdAt": "2026-08-02T06:44:39.745Z"
   }
 ]

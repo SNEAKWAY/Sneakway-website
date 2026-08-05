@@ -140,16 +140,6 @@
     "createdAt": "2026-08-05T09:37:04.802Z"
   },
   {
-    "id": "1785932839311",
-    "customerName": "Amal",
-    "customerPhone": "9249747269",
-    "trackingId": "",
-    "customerPrice": 3049,
-    "profit": 0,
-    "orderType": "retail",
-    "createdAt": "2026-08-05T12:27:19.312Z"
-  },
-  {
     "id": "1785933592812",
     "customerName": "Rajan",
     "customerPhone": "7559025158",

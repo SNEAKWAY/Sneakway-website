@@ -40,5 +40,11 @@
     "name": "Cod travel expense",
     "amount": 50,
     "createdAt": "2026-08-04T13:55:09.616Z"
+  },
+  {
+    "id": "1785951085355",
+    "name": "Boost SNEAKWAY",
+    "amount": 227,
+    "createdAt": "2026-08-05T17:31:25.355Z"
   }
 ]

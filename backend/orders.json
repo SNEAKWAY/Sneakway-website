@@ -178,5 +178,15 @@
     "profit": 769,
     "orderType": "retail",
     "createdAt": "2026-08-06T04:56:44.413Z"
+  },
+  {
+    "id": "1785996672064",
+    "customerName": "Shop",
+    "customerPhone": "0000",
+    "trackingId": "",
+    "customerPrice": 0,
+    "profit": 300,
+    "orderType": "retail",
+    "createdAt": "2026-08-06T06:11:12.064Z"
   }
 ]

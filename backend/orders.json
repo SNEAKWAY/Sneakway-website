@@ -238,5 +238,15 @@
     "profit": 100,
     "orderType": "reselling",
     "createdAt": "2026-08-06T15:15:09.574Z"
+  },
+  {
+    "id": "1786098282288",
+    "customerName": "Devika",
+    "customerPhone": "8089418742",
+    "trackingId": "",
+    "customerPrice": 2449,
+    "profit": 450,
+    "orderType": "retail",
+    "createdAt": "2026-08-07T10:24:42.288Z"
   }
 ]

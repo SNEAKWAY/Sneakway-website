@@ -288,5 +288,15 @@
     "profit": 500,
     "orderType": "retail",
     "createdAt": "2026-08-07T19:04:55.396Z"
+  },
+  {
+    "id": "1786365145161",
+    "customerName": "Binoy B. R",
+    "customerPhone": "89219 41169",
+    "trackingId": "",
+    "customerPrice": 2699,
+    "profit": 750,
+    "orderType": "retail",
+    "createdAt": "2026-08-10T12:32:25.161Z"
   }
 ]

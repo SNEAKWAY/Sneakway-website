@@ -298,5 +298,15 @@
     "profit": 750,
     "orderType": "retail",
     "createdAt": "2026-08-10T12:32:25.161Z"
+  },
+  {
+    "id": "1786365238582",
+    "customerName": "Rexon D",
+    "customerPhone": "8921854966",
+    "trackingId": "",
+    "customerPrice": 2649,
+    "profit": 600,
+    "orderType": "retail",
+    "createdAt": "2026-08-10T12:33:58.582Z"
   }
 ]

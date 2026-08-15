@@ -1574,5 +1574,15 @@
     "profit": 3000,
     "orderType": "reselling",
     "createdAt": "2026-08-15T15:13:58.174Z"
+  },
+  {
+    "id": "1786806881153",
+    "customerName": "----",
+    "customerPhone": "0000",
+    "trackingId": "",
+    "customerPrice": 66000,
+    "profit": 12770,
+    "orderType": "retail",
+    "createdAt": "2026-08-15T15:14:41.153Z"
   }
 ]

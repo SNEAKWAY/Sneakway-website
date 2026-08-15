@@ -393,9 +393,13 @@ const writeOrdersToGithub = async (config, orders, sha, previousCount = 0) => {
 
   if (!response.ok) {
     const errorBody = await response.json().catch(() => ({}));
-    throw new Error(
-      errorBody?.message || "Failed to write orders to GitHub.",
-    );
+    const githubMessage = errorBody?.message || "Failed to write orders to GitHub.";
+    if (/bad credentials|unauthorized|requires authentication/i.test(githubMessage)) {
+      throw new Error(
+        "GitHub token is invalid or expired. Update GITHUB_TOKEN in Vercel env vars.",
+      );
+    }
+    throw new Error(githubMessage);
   }
 };
 

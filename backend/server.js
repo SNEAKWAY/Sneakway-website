@@ -340,9 +340,13 @@ const readOrdersFromGithub = async (config) => {
 
   if (!response.ok) {
     const errorBody = await response.json().catch(() => ({}));
-    throw new Error(
-      errorBody?.message || "Failed to read orders from GitHub.",
-    );
+    const githubMessage = errorBody?.message || "Failed to read orders from GitHub.";
+    if (/bad credentials|unauthorized|requires authentication/i.test(githubMessage)) {
+      throw new Error(
+        "GitHub token is invalid or expired. Update GITHUB_TOKEN in Vercel env vars.",
+      );
+    }
+    throw new Error(githubMessage);
   }
 
   const payload = await response.json();

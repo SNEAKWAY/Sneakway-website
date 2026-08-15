@@ -353,46 +353,18 @@ const readOrdersFromGithub = async (config) => {
   };
 };
 
-const writeOrdersToGithub = async (config, orders, sha) => {
-  const apiUrl = `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${GITHUB_ORDERS_PATH}`;
-
-  let nextSha = sha;
-  if (!nextSha) {
-    const existingResponse = await fetch(`${apiUrl}?ref=${config.branch}`, {
-      headers: {
-        Authorization: `Bearer ${config.token}`,
-        Accept: "application/vnd.github+json",
-        "User-Agent": "xypht-backend",
-      },
-    });
-
-    if (existingResponse.ok) {
-      const existingPayload = await existingResponse.json();
-      nextSha = existingPayload?.sha;
-
-      // Guard against accidental mass overwrite (e.g. stale local fallback).
-      const existingContent = Buffer.from(
-        existingPayload.content || "",
-        "base64",
-      ).toString("utf-8");
-      const existingOrders = safeJsonParse(
-        existingContent || "[]",
-        [],
-        "orders.json from GitHub",
-      );
-      if (
-        Array.isArray(existingOrders) &&
-        existingOrders.length > 10 &&
-        orders.length < Math.floor(existingOrders.length * 0.5)
-      ) {
-        throw new Error(
-          `Refusing to overwrite ${existingOrders.length} orders with only ${orders.length}. ` +
-            "This usually means a stale/local read was about to wipe history.",
-        );
-      }
-    }
+const writeOrdersToGithub = async (config, orders, sha, previousCount = 0) => {
+  if (
+    previousCount > 10 &&
+    orders.length < Math.floor(previousCount * 0.5)
+  ) {
+    throw new Error(
+      `Refusing to overwrite ${previousCount} orders with only ${orders.length}. ` +
+        "This usually means a stale/local read was about to wipe history.",
+    );
   }
 
+  const apiUrl = `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${GITHUB_ORDERS_PATH}`;
   const response = await fetch(apiUrl, {
     method: "PUT",
     headers: {
@@ -405,9 +377,15 @@ const writeOrdersToGithub = async (config, orders, sha) => {
       message: "Update orders.json",
       content: Buffer.from(JSON.stringify(orders, null, 2)).toString("base64"),
       branch: config.branch,
-      sha: nextSha,
+      sha,
     }),
   });
+
+  if (response.status === 409) {
+    const conflict = new Error("GitHub orders conflict (409).");
+    conflict.code = "GITHUB_CONFLICT";
+    throw conflict;
+  }
 
   if (!response.ok) {
     const errorBody = await response.json().catch(() => ({}));
@@ -417,24 +395,27 @@ const writeOrdersToGithub = async (config, orders, sha) => {
   }
 };
 
+const mirrorOrdersToDisk = async (orders) => {
+  try {
+    await fs.writeFile(ordersPath, JSON.stringify(orders, null, 2));
+  } catch (error) {
+    console.error("Failed to mirror orders to disk.", error);
+  }
+};
+
 const readOrders = async () => {
   const githubConfig = getGithubConfig();
   if (githubConfig && GITHUB_ORDERS_PATH) {
     try {
       const { orders } = await readOrdersFromGithub(githubConfig);
-      // Best-effort local mirror so local/dev still has a copy.
-      try {
-        await fs.writeFile(ordersPath, JSON.stringify(orders, null, 2));
-      } catch (error) {
-        console.error("Failed to mirror orders to disk.", error);
-      }
+      await mirrorOrdersToDisk(orders);
       return orders;
     } catch (error) {
       console.error(
         "Failed to read orders from GitHub. Falling back to disk for read-only.",
         error,
       );
-      // Read-only fallback — writes still re-fetch GitHub and refuse shrinks.
+      // Read-only fallback — mutations never use this path.
     }
   }
 
@@ -450,16 +431,69 @@ const readOrders = async () => {
   }
 };
 
+/**
+ * Permanently-safe order mutation:
+ * - When GitHub is configured, ALWAYS read latest GitHub list first
+ * - Never write a list that came from disk fallback
+ * - Reject large shrinks
+ * - Retry once on GitHub SHA conflict (409)
+ */
+const mutateOrders = async (mutator) => {
+  const githubConfig = getGithubConfig();
+
+  if (githubConfig && GITHUB_ORDERS_PATH) {
+    let attempt = 0;
+    while (attempt < 3) {
+      attempt += 1;
+      const { orders, sha } = await readOrdersFromGithub(githubConfig);
+      const previousCount = Array.isArray(orders) ? orders.length : 0;
+      const draft = Array.isArray(orders) ? [...orders] : [];
+      const result = await mutator(draft);
+      const nextOrders = result?.orders ?? draft;
+      const payload = result?.payload;
+
+      try {
+        await writeOrdersToGithub(
+          githubConfig,
+          nextOrders,
+          sha,
+          previousCount,
+        );
+        await mirrorOrdersToDisk(nextOrders);
+        return { orders: nextOrders, payload };
+      } catch (error) {
+        if (error.code === "GITHUB_CONFLICT" && attempt < 3) {
+          continue;
+        }
+        throw error;
+      }
+    }
+  }
+
+  const raw = await fs.readFile(ordersPath, "utf-8").catch((error) => {
+    if (error.code === "ENOENT") return "[]";
+    throw error;
+  });
+  const orders = safeJsonParse(raw || "[]", [], "orders.json from disk");
+  const draft = [...orders];
+  const result = await mutator(draft);
+  const nextOrders = result?.orders ?? draft;
+  await fs.writeFile(ordersPath, JSON.stringify(nextOrders, null, 2));
+  return { orders: nextOrders, payload: result?.payload };
+};
+
 const writeOrders = async (orders) => {
+  // Prefer mutateOrders for create/update/delete. This remains for rare callers.
   const githubConfig = getGithubConfig();
   if (githubConfig && GITHUB_ORDERS_PATH) {
-    // Always write against latest GitHub state / SHA (shrink guard inside).
-    await writeOrdersToGithub(githubConfig, orders);
-    try {
-      await fs.writeFile(ordersPath, JSON.stringify(orders, null, 2));
-    } catch (error) {
-      console.error("Failed to mirror orders to disk.", error);
-    }
+    const latest = await readOrdersFromGithub(githubConfig);
+    await writeOrdersToGithub(
+      githubConfig,
+      orders,
+      latest.sha,
+      latest.orders.length,
+    );
+    await mirrorOrdersToDisk(orders);
     return;
   }
 
@@ -876,16 +910,18 @@ app.post("/orders", requireAdmin, async (req, res) => {
       });
     }
 
-    const orders = await readOrders();
     const newOrder = {
       id: Date.now().toString(),
       ...fields,
       createdAt: new Date().toISOString(),
     };
 
-    orders.push(newOrder);
-    await writeOrders(orders);
-    res.status(201).json(newOrder);
+    const { payload } = await mutateOrders((orders) => {
+      orders.push(newOrder);
+      return { orders, payload: newOrder };
+    });
+
+    res.status(201).json(payload);
   } catch (error) {
     console.error("Failed to create order.", error);
     res.status(500).json({
@@ -897,13 +933,6 @@ app.post("/orders", requireAdmin, async (req, res) => {
 
 app.put("/orders/:id", requireAdmin, async (req, res) => {
   try {
-    const orders = await readOrders();
-    const index = orders.findIndex((item) => item.id === req.params.id);
-
-    if (index === -1) {
-      return res.status(404).json({ message: "Order not found." });
-    }
-
     const fields = sanitizeOrderFields(req.body);
     if (!fields.customerName) {
       return res.status(400).json({
@@ -911,34 +940,57 @@ app.put("/orders/:id", requireAdmin, async (req, res) => {
       });
     }
 
-    const updated = {
-      ...orders[index],
-      ...fields,
-    };
+    const { payload } = await mutateOrders((orders) => {
+      const index = orders.findIndex((item) => item.id === req.params.id);
+      if (index === -1) {
+        const notFound = new Error("Order not found.");
+        notFound.code = "NOT_FOUND";
+        throw notFound;
+      }
 
-    orders[index] = updated;
-    await writeOrders(orders);
-    res.json(updated);
+      const updated = {
+        ...orders[index],
+        ...fields,
+      };
+      orders[index] = updated;
+      return { orders, payload: updated };
+    });
+
+    res.json(payload);
   } catch (error) {
+    if (error.code === "NOT_FOUND") {
+      return res.status(404).json({ message: "Order not found." });
+    }
     console.error("Failed to update order.", error);
-    res.status(500).json({ message: "Failed to update order." });
+    res.status(500).json({
+      message: "Failed to update order.",
+      details: error?.message || String(error),
+    });
   }
 });
 
 app.delete("/orders/:id", requireAdmin, async (req, res) => {
   try {
-    const orders = await readOrders();
-    const filtered = orders.filter((item) => item.id !== req.params.id);
+    await mutateOrders((orders) => {
+      const next = orders.filter((item) => item.id !== req.params.id);
+      if (next.length === orders.length) {
+        const notFound = new Error("Order not found.");
+        notFound.code = "NOT_FOUND";
+        throw notFound;
+      }
+      return { orders: next, payload: { message: "Order deleted." } };
+    });
 
-    if (filtered.length === orders.length) {
-      return res.status(404).json({ message: "Order not found." });
-    }
-
-    await writeOrders(filtered);
     res.json({ message: "Order deleted." });
   } catch (error) {
+    if (error.code === "NOT_FOUND") {
+      return res.status(404).json({ message: "Order not found." });
+    }
     console.error("Failed to delete order.", error);
-    res.status(500).json({ message: "Failed to delete order." });
+    res.status(500).json({
+      message: "Failed to delete order.",
+      details: error?.message || String(error),
+    });
   }
 });
 

@@ -420,10 +420,22 @@ const writeOrdersToGithub = async (config, orders, sha) => {
 const readOrders = async () => {
   const githubConfig = getGithubConfig();
   if (githubConfig && GITHUB_ORDERS_PATH) {
-    // GitHub is the source of truth when configured. Never fall back to a
-    // possibly empty/stale local file — that previously wiped production history.
-    const { orders } = await readOrdersFromGithub(githubConfig);
-    return orders;
+    try {
+      const { orders } = await readOrdersFromGithub(githubConfig);
+      // Best-effort local mirror so local/dev still has a copy.
+      try {
+        await fs.writeFile(ordersPath, JSON.stringify(orders, null, 2));
+      } catch (error) {
+        console.error("Failed to mirror orders to disk.", error);
+      }
+      return orders;
+    } catch (error) {
+      console.error(
+        "Failed to read orders from GitHub. Falling back to disk for read-only.",
+        error,
+      );
+      // Read-only fallback — writes still re-fetch GitHub and refuse shrinks.
+    }
   }
 
   try {
@@ -434,15 +446,15 @@ const readOrders = async () => {
       return [];
     }
     console.error("Failed to read orders from disk.", error);
-    return [];
+    throw error;
   }
 };
 
 const writeOrders = async (orders) => {
   const githubConfig = getGithubConfig();
   if (githubConfig && GITHUB_ORDERS_PATH) {
+    // Always write against latest GitHub state / SHA (shrink guard inside).
     await writeOrdersToGithub(githubConfig, orders);
-    // Keep a local mirror when possible (best-effort on serverless).
     try {
       await fs.writeFile(ordersPath, JSON.stringify(orders, null, 2));
     } catch (error) {
@@ -847,7 +859,11 @@ app.get("/orders", requireAdmin, async (_req, res) => {
     const orders = await readOrders();
     res.json(orders);
   } catch (error) {
-    res.status(500).json({ message: "Failed to read orders." });
+    console.error("Failed to read orders.", error);
+    res.status(500).json({
+      message: "Failed to read orders.",
+      details: error?.message || String(error),
+    });
   }
 });
 
@@ -872,7 +888,10 @@ app.post("/orders", requireAdmin, async (req, res) => {
     res.status(201).json(newOrder);
   } catch (error) {
     console.error("Failed to create order.", error);
-    res.status(500).json({ message: "Failed to create order." });
+    res.status(500).json({
+      message: "Failed to create order.",
+      details: error?.message || String(error),
+    });
   }
 });
 

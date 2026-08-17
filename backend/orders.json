@@ -1644,5 +1644,15 @@
     "profit": 700,
     "orderType": "retail",
     "createdAt": "2026-08-16T17:28:13.627Z"
+  },
+  {
+    "id": "1786985983204",
+    "customerName": "Deeksha. S Daniel",
+    "customerPhone": "9606091212",
+    "trackingId": "",
+    "customerPrice": 2499,
+    "profit": 500,
+    "orderType": "retail",
+    "createdAt": "2026-08-17T16:59:43.204Z"
   }
 ]

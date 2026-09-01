@@ -1704,5 +1704,15 @@
     "profit": 300,
     "orderType": "retail",
     "createdAt": "2026-09-01T13:15:15.821Z"
+  },
+  {
+    "id": "1788268868152",
+    "customerName": "Alan C jomon",
+    "customerPhone": "- 8075708968",
+    "trackingId": "",
+    "customerPrice": 2600,
+    "profit": 670,
+    "orderType": "retail",
+    "createdAt": "2026-09-01T13:21:08.152Z"
   }
 ]

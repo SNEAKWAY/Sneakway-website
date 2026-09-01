@@ -1714,5 +1714,15 @@
     "profit": 670,
     "orderType": "retail",
     "createdAt": "2026-09-01T13:21:08.152Z"
+  },
+  {
+    "id": "1788268950655",
+    "customerName": "Firoz Muhammad",
+    "customerPhone": "6238903458",
+    "trackingId": "",
+    "customerPrice": 2600,
+    "profit": 700,
+    "orderType": "retail",
+    "createdAt": "2026-09-01T13:22:30.655Z"
   }
 ]

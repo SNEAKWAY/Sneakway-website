@@ -1724,5 +1724,15 @@
     "profit": 700,
     "orderType": "retail",
     "createdAt": "2026-09-01T13:22:30.655Z"
+  },
+  {
+    "id": "1788269239520",
+    "customerName": "Fabio shoes hub",
+    "customerPhone": "0000",
+    "trackingId": "",
+    "customerPrice": 2899,
+    "profit": 1000,
+    "orderType": "reselling",
+    "createdAt": "2026-09-01T13:27:19.520Z"
   }
 ]

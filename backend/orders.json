@@ -1731,7 +1731,7 @@
     "customerPhone": "0000",
     "trackingId": "",
     "customerPrice": 2899,
-    "profit": 1000,
+    "profit": 100,
     "orderType": "reselling",
     "createdAt": "2026-09-01T13:27:19.520Z"
   }

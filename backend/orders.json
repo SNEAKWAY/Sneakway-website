@@ -1774,5 +1774,15 @@
     "profit": 649,
     "orderType": "retail",
     "createdAt": "2026-09-03T08:40:18.281Z"
+  },
+  {
+    "id": "1788424883809",
+    "customerName": "Libitha",
+    "customerPhone": "9495635541",
+    "trackingId": "",
+    "customerPrice": 2499,
+    "profit": 649,
+    "orderType": "retail",
+    "createdAt": "2026-09-03T08:41:23.809Z"
   }
 ]

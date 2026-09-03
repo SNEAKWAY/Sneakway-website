@@ -1794,5 +1794,15 @@
     "profit": 670,
     "orderType": "retail",
     "createdAt": "2026-09-03T08:44:49.681Z"
+  },
+  {
+    "id": "1788425123873",
+    "customerName": "Shoes gellary",
+    "customerPhone": "0000",
+    "trackingId": "",
+    "customerPrice": 2080,
+    "profit": 130,
+    "orderType": "reselling",
+    "createdAt": "2026-09-03T08:45:23.873Z"
   }
 ]

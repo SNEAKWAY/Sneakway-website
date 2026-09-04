@@ -1854,5 +1854,15 @@
     "profit": 50,
     "orderType": "reselling",
     "createdAt": "2026-09-04T17:09:05.948Z"
+  },
+  {
+    "id": "1788541782218",
+    "customerName": "Faibo shoes hub",
+    "customerPhone": "000",
+    "trackingId": "",
+    "customerPrice": 2049,
+    "profit": 100,
+    "orderType": "retail",
+    "createdAt": "2026-09-04T17:09:42.218Z"
   }
 ]

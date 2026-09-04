@@ -1814,5 +1814,15 @@
     "profit": 100,
     "orderType": "reselling",
     "createdAt": "2026-09-04T17:06:39.722Z"
+  },
+  {
+    "id": "1788541629509",
+    "customerName": "Sinan",
+    "customerPhone": "- 8281771528",
+    "trackingId": "",
+    "customerPrice": 999,
+    "profit": 350,
+    "orderType": "retail",
+    "createdAt": "2026-09-04T17:07:09.509Z"
   }
 ]

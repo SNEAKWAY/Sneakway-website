@@ -1884,5 +1884,15 @@
     "profit": 120,
     "orderType": "retail",
     "createdAt": "2026-09-04T17:12:40.582Z"
+  },
+  {
+    "id": "1788546263493",
+    "customerName": "Ansila ubaid",
+    "customerPhone": "- 9562881809",
+    "trackingId": "",
+    "customerPrice": 1500,
+    "profit": 280,
+    "orderType": "retail",
+    "createdAt": "2026-09-04T18:24:23.493Z"
   }
 ]

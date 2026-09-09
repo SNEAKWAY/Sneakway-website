@@ -1904,5 +1904,15 @@
     "profit": 600,
     "orderType": "retail",
     "createdAt": "2026-09-08T14:20:18.366Z"
+  },
+  {
+    "id": "1788963522566",
+    "customerName": "Vardha",
+    "customerPhone": "- 9745063285",
+    "trackingId": "",
+    "customerPrice": 2600,
+    "profit": 2600,
+    "orderType": "retail",
+    "createdAt": "2026-09-09T14:18:42.566Z"
   }
 ]

@@ -1954,5 +1954,15 @@
     "profit": 0,
     "orderType": "retail",
     "createdAt": "2026-09-30T16:32:50.224Z"
+  },
+  {
+    "id": "1790838373280",
+    "customerName": "Divyajyothi K S",
+    "customerPhone": "- 6238308955",
+    "trackingId": "Prepaid (Fast delivery)",
+    "customerPrice": 2249,
+    "profit": 0,
+    "orderType": "retail",
+    "createdAt": "2026-10-01T07:06:13.280Z"
   }
 ]

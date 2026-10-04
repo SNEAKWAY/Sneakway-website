@@ -2124,5 +2124,15 @@
     "profit": 0,
     "orderType": "retail",
     "createdAt": "2026-10-04T17:00:52.225Z"
+  },
+  {
+    "id": "1791133330542",
+    "customerName": "Sarfaraz",
+    "customerPhone": "9633304770",
+    "trackingId": "Prepaid( fast delivery)",
+    "customerPrice": 2499,
+    "profit": 0,
+    "orderType": "retail",
+    "createdAt": "2026-10-04T17:02:10.542Z"
   }
 ]

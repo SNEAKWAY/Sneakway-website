@@ -2274,5 +2274,15 @@
     "profit": 0,
     "orderType": "retail",
     "createdAt": "2026-10-06T12:57:55.649Z"
+  },
+  {
+    "id": "1791291508812",
+    "customerName": "Savio kurian",
+    "customerPhone": "8075140170",
+    "trackingId": "Prepaid",
+    "customerPrice": 1499,
+    "profit": 0,
+    "orderType": "retail",
+    "createdAt": "2026-10-06T12:58:28.812Z"
   }
 ]

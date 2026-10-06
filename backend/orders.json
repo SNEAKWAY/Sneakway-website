@@ -2284,5 +2284,15 @@
     "profit": 0,
     "orderType": "retail",
     "createdAt": "2026-10-06T12:58:28.812Z"
+  },
+  {
+    "id": "1791291586168",
+    "customerName": "Akhil vinayak",
+    "customerPhone": "9074179790",
+    "trackingId": "Prepaid",
+    "customerPrice": 899,
+    "profit": 0,
+    "orderType": "retail",
+    "createdAt": "2026-10-06T12:59:46.168Z"
   }
 ]

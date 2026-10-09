@@ -2384,5 +2384,15 @@
     "profit": 0,
     "orderType": "retail",
     "createdAt": "2026-10-09T13:22:25.825Z"
+  },
+  {
+    "id": "1791552179161",
+    "customerName": "Faraz muhammed",
+    "customerPhone": "8089065668",
+    "trackingId": "Cod",
+    "customerPrice": 1399,
+    "profit": 0,
+    "orderType": "retail",
+    "createdAt": "2026-10-09T13:22:59.161Z"
   }
 ]

@@ -2354,5 +2354,15 @@
     "profit": 0,
     "orderType": "retail",
     "createdAt": "2026-10-09T13:20:51.871Z"
+  },
+  {
+    "id": "1791552086428",
+    "customerName": "Adhithya",
+    "customerPhone": "7012874599",
+    "trackingId": "Cod",
+    "customerPrice": 899,
+    "profit": 0,
+    "orderType": "retail",
+    "createdAt": "2026-10-09T13:21:26.428Z"
   }
 ]

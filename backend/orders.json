@@ -2314,5 +2314,15 @@
     "profit": 0,
     "orderType": "retail",
     "createdAt": "2026-10-06T13:00:53.486Z"
+  },
+  {
+    "id": "1791551903760",
+    "customerName": "Sujith M Swamy",
+    "customerPhone": "8086482896",
+    "trackingId": "Cod",
+    "customerPrice": 799,
+    "profit": 0,
+    "orderType": "retail",
+    "createdAt": "2026-10-09T13:18:23.760Z"
   }
 ]

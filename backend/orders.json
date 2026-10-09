@@ -2374,5 +2374,15 @@
     "profit": 0,
     "orderType": "retail",
     "createdAt": "2026-10-09T13:21:47.799Z"
+  },
+  {
+    "id": "1791552145825",
+    "customerName": "Ajin koshy",
+    "customerPhone": "7994787938",
+    "trackingId": "Prepaid (out kerala)",
+    "customerPrice": 899,
+    "profit": 0,
+    "orderType": "retail",
+    "createdAt": "2026-10-09T13:22:25.825Z"
   }
 ]

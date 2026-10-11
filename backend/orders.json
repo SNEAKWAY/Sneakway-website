@@ -2504,5 +2504,15 @@
     "profit": 0,
     "orderType": "retail",
     "createdAt": "2026-10-11T18:42:14.772Z"
+  },
+  {
+    "id": "1791744158398",
+    "customerName": "Rudresh CR",
+    "customerPhone": "9947663518",
+    "trackingId": "Prepaid",
+    "customerPrice": 899,
+    "profit": 0,
+    "orderType": "retail",
+    "createdAt": "2026-10-11T18:42:38.398Z"
   }
 ]

@@ -2484,5 +2484,15 @@
     "profit": 0,
     "orderType": "retail",
     "createdAt": "2026-10-11T18:41:06.544Z"
+  },
+  {
+    "id": "1791744112674",
+    "customerName": "Praveena prabhakaran",
+    "customerPhone": "9778596384",
+    "trackingId": "Prepaid (fast delivery)",
+    "customerPrice": 2499,
+    "profit": 0,
+    "orderType": "retail",
+    "createdAt": "2026-10-11T18:41:52.674Z"
   }
 ]
